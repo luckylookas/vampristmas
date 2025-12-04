@@ -33,6 +33,7 @@ jobs:
       - name: upload artifacts
         uses: actions/upload-artifact@v5.0.0
         with:
+          name: github-pages
           path: ./dist/LVChristmas/browser
 
       - name: deploy
