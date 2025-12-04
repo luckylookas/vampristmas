@@ -35,9 +35,8 @@ jobs:
         run: npm run build
 
       - name: upload artifacts
-        uses: actions/upload-artifact@v5.0.0
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
           path: ./dist/LVChristmas/browser
 
       - name: deploy
