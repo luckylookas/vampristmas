@@ -12,49 +12,6 @@ export interface Position {
   longitude: number;
 }
 
-// export const locations: Location[] = [
-//   {
-//     name: 'iselgasse ecke lafnitzgasse',
-//     position: {
-//       latitude: 48.28121320422785,
-//       longitude: 16.456317145898865
-//     },
-//     paragraphs: ['geh zur ecke iselgasse/lafnitzgasse'],
-//     id: 'start'
-//   },
-//   {
-//     name: 'lafnitzgasse ecke gerlosplatz',
-//     id: 'station1',
-//     position: {
-//       latitude: 48.281408326540266,
-//       longitude: 16.457866619826348
-//     },
-//     paragraphs: ['geh zur ecke lafnitzgasse/gerlosplatz']
-//   },
-//   {
-//     name: 'puzzle',
-//     solution: '1234',
-//     id: 'station2',
-//     paragraphs: ['gib 1234 ein']
-//   },
-//   {
-//     name: 'retour',
-//     position: {
-//       latitude: 48.279573349700684,
-//       longitude: 16.457547405366004
-//     },
-//     id: 'station3',
-//     paragraphs: ['geh ueber die ispergasse retour']
-//   },
-//   {
-//     name: 'finale',
-//     id: 'finale',
-//     paragraphs: ['super!', 'du hast gewonnen.']
-//
-//   }
-//
-// ];
-
 export const locations: Location[] = [
   {
     name: "Am Anfang",
@@ -79,12 +36,12 @@ export const locations: Location[] = [
     name: "Yella Yella",
     id: "b098bad9908b50885bad274880dbc8bc",
     paragraphs: [
-      'Ja, genau hier wars, ich kann mich noch erinnern, als wäre es am 4.6.2024 gewesen!',
-      'Was sich gut trifft, weil genau da war er ja auch,der Anfang der Geschichte.',
+      'Ja, genau hier war es! Ich kann mich noch erinnern, als wäre es am 4.6.2024 gewesen!',
+      'Was sich gut trifft, weil genau da war er ja auch, der Anfang der Geschichte.',
       'Hier wurde ich, Dagobert, das zweite Mal geboren.',
-      'Und mit mir der begann hier eine lange und verwirrende Konversation.',
+      'Und mit mir begann hier eine lange und verwirrende Konversation.',
       '',
-      'Was war denn nochmal das erste, das in dieser Konversation gesagt wurde?'
+      'Was war denn nochmal das Erste, das in dieser Konversation gesagt wurde?'
     ],
     solution: '04.07'
   },
@@ -96,22 +53,21 @@ export const locations: Location[] = [
       longitude: 16.366976926984005
     },
     paragraphs: [
-      'Ach ja, genau, manchmal hab ich ein Gedächtnis wie Elena',
-      'Naja wo war ich. Ach ja.',
+      'Genau! manchmal hab ich ein Gedächtnis wie Elena.',
+      'Naja wo war ich? Ach ja.',
       'Bei allem was schoen ist an meinem neuen Leben, eines ist doch immer muehseelig',
       'Essen.',
-      'Ich wollte euch ja eigentlich einladen, aber findet einmal einen Ort an dem wir alle drei etwas finden!',
+      'Findet einmal einen Ort an dem wir alle drei etwas essen koennten!',
+      'Das ist einfach unmoeglich!',
+      'Fast.',
+      'Eine gute Gegend, nicht weit vom Ring, eine Universitaet und ein wahres Buffet an freiwilligen Spenden. Alles im selben Bezirk.',
       '',
-      'Ist natuerlich ein Scherz, natuerlich habe ich etwas gefunden!',
-      'Eine gute Gegend, nicht weit vom Ring, eine Universitaet und ein wahres Buffet fuer meine Ansprueche. Alles im selben Bezirk.',
-      '',
-      'Ich kann nicht zusehen wie ihr esst, dass ist mir zu brutal. Ich warte da auf euch wo ich etwas finde.',
-      'Wir haben naemlich einen wichtigen Auftrag zu erledigen!',
+      'Ich kann nicht zusehen wie ihr esst, das ist mir zu brutal. Ich warte da auf euch wo ich etwas essen kann.',
+      'Wir haben uebrigens einen wichtigen Auftrag zu erledigen!',
       '',
       'Es geht um eine mysterioese Party...'
     ]
   },
-  //{noch ein raetsel...}
   {
     name: 'Der Auftrag',
     id: '2028sd3fgd99ybb534uiob274540dfc8kg',
@@ -124,10 +80,10 @@ export const locations: Location[] = [
       'Wir sollen niemandem etwas erzaehlen und dringend und konzentriert daran arbeiten. Wie immer also.',
       '',
       'Party? Welche Party? Wir haben jetzt keine Zeit fuer solchen Unsinn!',
-      'Scheinbar macht ein Vampirjaeger Wien unsicher! Ich bin natuerlich schoneinmal losgegangen.',
+      'Scheinbar macht ein Vampirjaeger Wien unsicher! Ich bin schoneinmal losgegangen.',
       '',
       'Wie, wohin?',
-      'Naja natuerlich zum Hof des beruehmtesten Vampirjaegers Wiens!',
+      'Natuerlich zum Hof des beruehmtesten Vampirjaegers Wiens!',
       '',
       'Wir treffen uns dann dort, ja?',
     ],
@@ -141,17 +97,17 @@ export const locations: Location[] = [
     },
     paragraphs: [
       'Schlechte Nachrichten Leute. Es hat sich herausgestellt, dass es ein Problem mit diesem van Swieten gibt.',
-      'Erstens ist er offenbar schon lange tot.',
-      'Zweitens, hat er hier offenbar nie gewohnt und auch sonst kaum etwas mit diesem Haus zu tun.',
+      'Erstens ist er schon lange tot.',
+      'Zweitens, hat er hier nie gewohnt und auch sonst kaum etwas mit diesem Haus zu tun.',
       '',
       'Naja, Fehler passieren.',
       '',
-      'Das is alles sowieso egal, weil es sich naemlich ergeben hat, dass ich von jemandem entfuehrt wurde!',
+      'Das is alles sowieso egal, weil es sich ergeben hat, dass ich von jemandem entfuehrt wurde!',
       'Offenbar ermitteln wir zu einer Verschwoerung. Ich hab gefragt, es hat nichts mit dem Jaeger und auch nichts mit einer Party zu tun.',
       '',
-      'Ehrlich gesagt, diese Entfuehrer haben nich weniger verwirrt gewirkt als ihr gerade.',
-      'Das merkwuerdigste ist ja, dass sie mir gesagt haben wo sie mich hin entfuehren!',
-      'Hat mich direkt gewundert, dort waren wir gemeinsam schoneinmal eingesperrt und sind in weniger als einer Stunde entkommen!',
+      'Ehrlich gesagt, diese Entfuehrer haben nicht weniger verwirrt gewirkt als ihr gerade.',
+      'Das Merkwuerdigste ist ja, dass sie mir gesagt haben wohin sie mich entfuehren!',
+      'Hat mich direkt gewundert. Dort waren wir gemeinsam schoneinmal eingesperrt und sind in weniger als einer Stunde entkommen!',
       '',
       'Kommt ihr mich abholen?'
     ],
@@ -167,7 +123,7 @@ export const locations: Location[] = [
       'Ha!',
       'Ihr Narren.',
       'Ihr seid direkt in alle meine Fallen getappt!',
-      'Ich bin garnicht Dagobert, ich bin es, CLAUDE, euer Erzfeind!',
+      'Ich bin garnicht Dagobert, ich bin es, PAUL, euer Erzfeind!',
       'Jaha ich sehe das Entsetzen auf euren Gesichtern. Wie kann es sein, dass dieser gewiefte Boesewicht, der uns schon so oft begegnet ist und an den wir uns immer erinnern werden, auch hinter dieser Falle steckt!?',
       '',
       'Oh ja! Ich bin wie eine Spinne und ihr zappelt in meinem Netz!',
@@ -183,7 +139,7 @@ export const locations: Location[] = [
     ]
   },
   {
-    name: 'CLAUDE!',
+    name: 'Paul?',
     id: '78923bn2345c297234fccwed234sdfgfv',
     paragraphs: [
       'Ihr habt mein Raetsel also loesen koennen!?',
@@ -201,7 +157,7 @@ export const locations: Location[] = [
     solution: 'ponyschlecken'
   },
   {
-    name: 'Claude?',
+    name: 'Paul.',
     id: 'asdfbn9pt7345nvp79w4bn0gn78werv',
     paragraphs: [
       'Wahnsinn!',
@@ -262,7 +218,7 @@ export const locations: Location[] = [
       'Ah, das mit ihren Eltern und...',
       'Unter den schlimmsten zehn bis zwanzing Dingen die Ihnen jemals angetan wurden!',
       '',
-      'Und um zu beweisen, dass Sie meine ultimative Demuetigung gesehen haben, sagen Sie mir doch das, was nach der Demuetigung kommt!'
+      'Und um zu beweisen, dass Sie meine ultimative Demuetigung gelesen haben, sagen Sie mir was nach meiner Beleidugung steht!'
     ],
     solution: 'QI',
   },
@@ -270,7 +226,7 @@ export const locations: Location[] = [
     name: 'Immernoch da?',
     id: '102381902jdj123dnc12012l3kbyercx4',
     paragraphs: [
-      'HA!',
+      'Ha hab ich Sie drangekriegt Jery!',
       '',
       'Wie, ihr seid immernoch da?',
       'Nach all meinen Fallen und Demuetigungen?',
