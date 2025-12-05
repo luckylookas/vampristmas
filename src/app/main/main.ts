@@ -58,9 +58,29 @@ export const NAVIGATOR = new InjectionToken<Navigator>(
   styleUrl: './main.css',
 })
 export class Main {
+  readonly thresholdMeters = 50;
   private navigator = inject(NAVIGATOR);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+
+  position: ResourceRef<Position|undefined> = resource({
+    params: () => ({}),
+    defaultValue: undefined,
+    loader: () =>
+      !this.busy() ? Promise.resolve(undefined) :
+        new Promise((ok, fail) => {
+          this.navigator.geolocation.getCurrentPosition(
+            success => {
+              ok(success.coords)
+              this.busy.set(false)
+            },
+            fail,
+            {
+              enableHighAccuracy: true,
+            })
+        })
+
+  })
 
   currentLocation = toSignal(this.route.paramMap.pipe(
     map(it => it.get('id') ?? locations[0].id),
@@ -68,31 +88,27 @@ export class Main {
   ), {initialValue: locations[0]})
 
   guess = model('')
-  skipped = signal(4)
+  skipped = signal(0)
   done = computed(() => locations.findIndex(it => it.id === this.currentLocation().id) === locations.length-1)
 
   //solutions
   distanceToTarget = computed(() => this.position.value() == undefined || this.currentLocation().position == undefined ? undefined : metersAway(this.position.value()!, this.currentLocation().position!))
   solutionForPuzzle = computed(() => this.currentLocation().solution)
 
-  success = computed(() => (this.currentLocation().position == undefined || this.distanceToTarget()! < 50) && (this.solutionForPuzzle() == undefined || this.guess() === this.solutionForPuzzle()))
 
-  readonly skippedText = [
+  reachedLocation = computed(() => this.currentLocation().position != undefined && this.distanceToTarget()! < this.thresholdMeters)
+  solvedPuzzle = computed(() => this.solutionForPuzzle() != undefined && this.guess() === this.solutionForPuzzle())
+  success = computed(() => this.reachedLocation() || this.solvedPuzzle())
+
+  readonly defaultSkipText = [
     'einfach weiter bitte',
     'wirklich?',
     'wirklich wirklich?',
     'ohne schummeln?',
     'versprochen?'
-  ].reverse()
-
-  readonly noWay = [
-    'keinen!',
-    'wirklich!',
-    'nein, wirklich wirklich!',
-    'lass das!',
-    'bitte?'
-  ].reverse()
-
+  ]
+  busy = signal(false)
+  skipText = computed(() => this.currentLocation().skipText ?? this.defaultSkipText)
 
   advance() {
     const next = locations.findIndex(it => it.id === this.currentLocation()?.id)+1
@@ -100,8 +116,7 @@ export class Main {
       return
     }
 
-    this.skipped.set(4)
-
+    this.skipped.set(0)
     this.position.set(undefined)
     this.guess.set('')
     this.router.navigate(['/'+locations[next].id])
@@ -127,34 +142,14 @@ export class Main {
     });
   }
 
-  busy = signal(false)
-
-  position: ResourceRef<Position|undefined> = resource({
-    params: () => ({}),
-    defaultValue: undefined,
-    loader: () =>
-      !this.busy() ? Promise.resolve(undefined) :
-      new Promise((ok, fail) => {
-        this.navigator.geolocation.getCurrentPosition(
-          success => {
-            ok(success.coords)
-            this.busy.set(false)
-          },
-          fail,
-          {
-            enableHighAccuracy: true,
-          })
-      })
-
-  })
 
   public thereYet() {
     this.busy.set(true)
   }
 
   public skip() {
-    this.skipped.set(this.skipped() - 1)
-    if (this.skipped() < 0) {
+    this.skipped.set(this.skipped() + 1)
+    if (this.skipped() === this.skipText().length) {
      this.advance()
     }
 

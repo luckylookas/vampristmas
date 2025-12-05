@@ -48,12 +48,7 @@
 
 
     @if (!done()) {
-      @if (!currentLocation().position && !currentLocation().solution) {
-        <button matButton="elevated" (click)="skip()">{{ noWay[skipped()] }}</button>
-      } @else {
-        <button matButton="elevated" (click)="skip()">{{ skippedText[skipped()] }}</button>
-
-      }
+        <button matButton="elevated" (click)="skip()">{{ skipText()[skipped()] }}</button>
     }
   </div>
 </div>

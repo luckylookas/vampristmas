@@ -4,6 +4,7 @@ export interface Location {
   id: string;
   solution?: string;
   paragraphs: string[];
+  skipText?: string[];
 }
 
 export interface Position {
@@ -214,6 +215,13 @@ export const locations: Location[] = [
       'Ihr seid hier fuer immer gefangen!',
       'AHAHAHAHAHAHAHAHAHAHAHAHAHAHA'.repeat(100),
     ],
+    skipText: [
+      'keinen!',
+      'wirklich!',
+      'nein, wirklich wirklich!',
+      'lass das!',
+      'bitte?'
+    ]
   },
   {
     name: 'AHAHAHAHAHA',
@@ -221,6 +229,13 @@ export const locations: Location[] = [
     paragraphs: [
       'AHAHAHAHAHAHAHAHAHAHAHAHAHAHA'.repeat(100),
     ],
+    skipText: [
+      'HAHAHAHAHAHAHA',
+      'AAAAHAHAHAHAHA!',
+      'HAAAAHA haa',
+      'ha ... haha',
+      'haha h... ufff'
+    ]
   },
   {
     name: '*Keuch*',
@@ -263,6 +278,8 @@ export const locations: Location[] = [
       'Sind wir durch unsere ewige Feindschaft irgendwie zusammengewachsen?',
       '',
       'Also ich geb zu, ohne euch wuerde mir schon etwas fehlen im Leben.',
+      '',
+      'Ja, eigentlich bin ich richtig froh, dass ich euch getroffen und die chaotische Reise mitgemacht hab.',
       '',
       'Was sagt ihr, lassen wir das fuer heute und ich lad euch einfach zum Essen ein?',
     ]
