@@ -4,6 +4,12 @@ export interface Location {
   id: string;
   solution?: string;
   paragraphs: string[];
+  next: Next[]
+}
+
+export interface Next {
+  player: string,
+  nextId: string,
 }
 
 export interface Position {
@@ -72,6 +78,12 @@ export const locations: Location[] = [
       'Und wisst ihr was? Ich sollte es nicht bereuen.',
       '',
       'Treffen wir uns da?'
+    ],
+    next: [
+      {
+        player: '*',
+        nextId: 'b098bad9908b50885bad274880dbc8bc',
+      }
     ]
   },
   {
@@ -85,11 +97,23 @@ export const locations: Location[] = [
       '',
       'Was war denn nochmal das erste, das in dieser Konversation gesagt wurde?'
     ],
-    solution: '04.07'
+    solution: '04.07',
+    next: [
+      {
+        player: '*',
+        nextId: '222',
+      }
+    ]
   },
   {
     name: 'Hunger',
     id: '222',
+    next: [
+      {
+        player: '*',
+        nextId: '444',
+      }
+    ],
     position: {
       latitude: 48.1954187026802,
       longitude: 16.366976926984005
@@ -110,10 +134,16 @@ export const locations: Location[] = [
       'Es geht um eine mysterioese Party...'
     ]
   },
-  //{noch ein raetsel...}
+
   {
     name: 'Der Auftrag',
     id: '444',
+    next: [
+      {
+        player: '*',
+        nextId: '234f23r234rff3edwf346j67',
+      }
+    ],
     position: {
       latitude: 48.21061466967007,
       longitude: 16.37470521598213
@@ -133,7 +163,13 @@ export const locations: Location[] = [
   },
   {
     name: 'Bei Gerard van Swieten',
-    id: '2222',
+    id: '234f23r234rff3edwf346j67',
+    next: [
+      {
+        player: '*',
+        nextId: '01k29j112msms925435129912f1023',
+      }
+    ],
     position: {
       latitude: 48.18965209658004,
       longitude: 16.414155250266678
@@ -157,7 +193,13 @@ export const locations: Location[] = [
   },
   {
     name: 'Ein Entkommen',
-    id: '5555',
+    id: '01k29j112msms925435129912f1023',
+    next: [
+      {
+        player: '*',
+        nextId: '0812hj0nd123nf453b34yvb1o3yg34rvb1i4fb',
+      }
+    ],
     position: {
       latitude: 48.20227065199294,
       longitude:  16.39230540974233
@@ -181,8 +223,14 @@ export const locations: Location[] = [
     ]
   },
   {
-    name: 'Trichtersaufen',
-    id: '666',
+    name: 'Des Pudels Kern',
+    id: '0812hj0nd123nf453b34yvb1o3yg34rvb1i4fb',
+    next: [
+      {
+        player: '*',
+        nextId: '890',
+      }
+    ],
     paragraphs: [
       'Ihr habt mein Raetsel also loesen koennen!?',
       'Damit seit ihr erneut in meine Falle getappt.',
@@ -205,6 +253,12 @@ export const locations: Location[] = [
   {
     name: 'Claude',
     id: '890',
+    next: [
+      {
+        player: '*',
+        nextId: '',
+      }
+    ],
     paragraphs: [
       'Wahnsinn!',
       'Ihr habt`s geschafft!',
