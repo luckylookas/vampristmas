@@ -91,10 +91,8 @@ export class Main {
 
 
   nextLocation = computed(() => {
-    const nextId =
-
-    locations.find(it => it.id === this.currentLocation().id)?.next.find(n => n.player === this.player())?.nextId
-    ?? locations.find(it => it.id === this.currentLocation().id)?.next.find(n => n.player === 'any')?.nextId
+    const nextId = this.currentLocation().next.find(n => n.player === this.player())?.nextId
+    ?? this.currentLocation().next.find(n => n.player === 'any')?.nextId
     ?? locations[0].id
 
     return locations.find(it => it.id === nextId) ?? locations[0];
@@ -104,7 +102,6 @@ export class Main {
 
   // inputs for solutions
   guess = model('')
-  done = computed(() => !this.currentLocation().next.length)
   skipped = signal(0)
   done = computed(() => locations.findIndex(it => it.id === this.currentLocation().id) === locations.length-1)
 

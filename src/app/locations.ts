@@ -4,19 +4,37 @@ export interface Location {
   id: string;
   solution?: string;
   paragraphs: string[];
+  skipText?: string[];
   next: Next[]
 }
 
 export interface Next {
   player: string,
   nextId: string,
-  skipText?: string[];
 }
 
 export interface Position {
   latitude: number;
   longitude: number;
 }
+
+
+/*
+
+puzzle ideen:
+
+'beim HAHAHA eine station: 'hier geht es nur fuer mich weiter!
+ --> jemand muss auf den player 'paul' wechseln.
+
+ dort erfaehrt man den link wo es fuer jeden spieler weitergeht.
+
+ --> es gibt einen link fuer jeden von ihnen (branching path)
+
+ --> es gibt ein raetsel wo die beide an 2 verschiedenen Orten sein muessen (aber nah bei einander)
+ --> dannach wieder gemeinsam.
+
+
+ */
 
 export const locations: Location[] = [
   {
@@ -66,7 +84,6 @@ export const locations: Location[] = [
   {
     name: 'Hunger',
     id: 'g02855d99hub50l35bad274540dfc8bf',
-    id: '222',
     next: [
       {
         player: 'any',
@@ -186,12 +203,8 @@ export const locations: Location[] = [
     id: '78923bn2345c297234fccwed234sdfgfv',
     next: [
       {
-        player: 'lukas',
-        nextId: '890',
-      },
-      {
-        player: 'paul',
-        nextId: '123123123',
+        player: 'any',
+        nextId: 'asdfbn9pt7345nvp79w4bn0gn78werv',
       }
     ],
     paragraphs: [
@@ -210,7 +223,12 @@ export const locations: Location[] = [
     solution: 'ponyschlecken'
   },
   {
-    next: [],
+    next: [
+      {
+        player: 'any',
+        nextId: '9247835y9234hcnm2397h0fbn283ndsaf',
+      }
+    ],
     name: 'Paul.',
     id: 'asdfbn9pt7345nvp79w4bn0gn78werv',
     paragraphs: [
@@ -236,6 +254,12 @@ export const locations: Location[] = [
   {
     name: 'AHAHAHAHAHA',
     id: '9247835y9234hcnm2397h0fbn283ndsaf',
+    next: [
+      {
+        player: 'any',
+        nextId: 'df345trvr3fr43453asdf23423f4c23kltg',
+      }
+    ],
     paragraphs: [
       'AHAHAHAHAHAHAHAHAHAHAHAHAHAHA'.repeat(100),
     ],
@@ -249,6 +273,12 @@ export const locations: Location[] = [
   },
   {
     name: '*Keuch*',
+    next: [
+      {
+        player: 'any',
+        nextId: '102381902jdj123dnc12012l3kbyercx4',
+      }
+    ],
     id: 'df345trvr3fr43453asdf23423f4c23kltg',
     paragraphs: [
       'Ha...ufff',
@@ -278,6 +308,7 @@ export const locations: Location[] = [
   },
   {
     name: 'Immernoch da?',
+    next: [],
     id: '102381902jdj123dnc12012l3kbyercx4',
     paragraphs: [
       'Ha hab ich Sie drangekriegt Jery!',
