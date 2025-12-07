@@ -292,7 +292,7 @@ export const locations: Location[] = [
       'KEINEN!',
       '',
       'Ihr seid hier fuer immer gefangen!',
-      'AHAHAHAHAHAHAH'.repeat(100),
+      'AHAHAHAHAHAHAH'.repeat(50),
     ],
     skipText: [
       'nicht einmal hier!',
@@ -323,7 +323,7 @@ export const locations: Location[] = [
     ],
     paragraphs: [
       'Nur ich selbst kann aus dieser Falle entkommen!',
-      'AHAHAHAHAHAHAHAHAHAHAHAHAHAHA'.repeat(100),
+      'AHAHAHAHAHAHAHAHAHAHAHAHAHAHA'.repeat(50),
     ],
     skipText: [
       'Der Ausweg!',
@@ -476,7 +476,7 @@ export const locations: Location[] = [
     next: [
       {
         player: 'any',
-        nextId: 'theEnd',
+        nextId: 'Motto_am_Fluss',
       }
     ],
     hints: [
@@ -490,7 +490,7 @@ export const locations: Location[] = [
       'Das ist ja ein geradezu laecherlicher Versuch!',
       '',
       '...',
-      'Ein gerade zu laecherlicher Versuch von mir zu tun als waere ich nicht ergriffen!',
+      'Ein gerade zu laecherlicher Versuch von mir zu tun als waere ich nicht geruehrt!',
       'Aber heisst das, ich muss garkeine komplizierten Fallen stellen, damit wir gemeinsam etwas unternehmen koennen?',
       '',
       'Es macht aber schon Spass irgendwie.',
@@ -498,20 +498,21 @@ export const locations: Location[] = [
     ]
   },
   {
-    name: 'The End ...?',
+    name: 'The End',
     next: [
     ],
     hints: [
     ],
-    id: 'theEnd',
+    id: 'Motto_am_Fluss',
     paragraphs: [
-      'Und so Endet unsere Geschichte',
+      'Und so endet unsere Geschichte.',
+      'Da wo alle guten Geschichten enden, an ihrem Ende.',
       '',
       'Ich hoffe es hat alles funktioniert und ihr hattet Spass.',
       '',
       'Nach dem ganzen herumgerenne hat ihr bestimmt Hunger, oder Durst, oder euch ist kalt oder heiss!',
       '',
-      'Ich hab mich solange einmal an einen Tisch im LOKAL gesetzt und warte auf euch.'
+      'Ich hab mich solange einmal an einen Tisch hier gesetzt und warte auf euch.'
     ]
   },
 ]
