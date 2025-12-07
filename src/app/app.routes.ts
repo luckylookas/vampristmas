@@ -3,5 +3,4 @@ import {Main} from './main/main';
 
 export const routes: Routes = [
   {path: '', component: Main},
-  {path: ':player/:id', component: Main}
 ];

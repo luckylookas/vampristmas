@@ -81,12 +81,12 @@ export class Main {
 
   })
 
-  currentLocation = toSignal(this.route.paramMap.pipe(
+  currentLocation = toSignal(this.route.queryParamMap.pipe(
     map(it => it.get('id') ?? locations[0].id),
     map(it =>  locations.find(c => c.id === it) ?? locations[0])
   ), {initialValue: locations[0]})
 
-  player = toSignal(this.route.paramMap.pipe(
+  player = toSignal(this.route.queryParamMap.pipe(
     map(it => it.get('player') ?? 'any')), {initialValue: 'any'});
 
 
@@ -116,10 +116,7 @@ export class Main {
 
   readonly defaultSkipText = [
     'einfach weiter bitte',
-    'wirklich?',
-    'wirklich wirklich?',
-    'ohne schummeln?',
-    'versprochen?'
+    'wirklich?'
   ]
   busy = signal(false)
   skipText = computed(() => this.currentLocation().skipText ?? this.defaultSkipText)
@@ -132,7 +129,7 @@ export class Main {
     this.skipped.set(0)
     this.position.set(undefined)
     this.guess.set('')
-    this.router.navigate(['/' + this.player()  + '/' + this.nextLocation().id])
+    this.router.navigate([''], {queryParams: {player: this.player(), id: this.nextLocation().id}})
   }
 
 

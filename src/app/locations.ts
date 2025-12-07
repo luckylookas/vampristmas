@@ -5,7 +5,8 @@ export interface Location {
   solution?: string;
   paragraphs: string[];
   skipText?: string[];
-  next: Next[]
+  next: Next[],
+  hints: string[]
 }
 
 export interface Next {
@@ -40,6 +41,10 @@ export const locations: Location[] = [
   {
     name: "Am Anfang",
     id: "start",
+    hints:[
+      'Wo haben wir zum ersten Mal Vampire gespielt?',
+      'Ihr muesst zum Yella Yella.'
+    ],
     position: {
       latitude: 48.22488081787097,
       longitude: 16.497051648696154
@@ -74,6 +79,13 @@ export const locations: Location[] = [
       'Was war denn nochmal das Erste, das in dieser Konversation gesagt wurde?'
     ],
     solution: '04.07',
+    hints: [
+      'Ihr muesst euch an nichts erinnern koennen.',
+      'Die Konversation ist schriftlich fest gehalten.',
+      'Ihr habt sie immer dabei.',
+      'Es geht um die erste Nachricht in der Viva la Seestadt Gruppe.',
+      'Tobi hat als erstes direkt nur "04.07" geschrieben.'
+    ],
     next: [
       {
         player: 'any',
@@ -83,6 +95,13 @@ export const locations: Location[] = [
   },
   {
     name: 'Hunger',
+    hints: [
+      'Was kann Dagobert denn essen?',
+      'Was waere denn die einfachste Moeglichkeit fuer ihn an Essen zu kommen?',
+      'Es hat nicht direkt etwas mit der Kirche zu tun, es kommt aber ein Kreuz vor.',
+      'Dagobert koennte das an vielen Orten in Wien bekommen - aber er will zum Zentrum.',
+      'Ihr muesst zur Blutspendezentrale im 4. Bezirk.'
+    ],
     id: 'g02855d99hub50l35bad274540dfc8bf',
     next: [
       {
@@ -102,9 +121,12 @@ export const locations: Location[] = [
       'Findet einmal einen Ort an dem wir alle drei etwas essen koennten!',
       'Das ist einfach unmoeglich!',
       'Fast.',
-      'Eine gute Gegend, nicht weit vom Ring, eine Universitaet und ein wahres Buffet an freiwilligen Spenden. Alles im selben Bezirk.',
+      'Ein wahres Buffet, an dem sogar ich mitessen kann!',
+      'Wenn es den Namen nicht schon gaebe, waere er wirlich eine gute Wahl fuer ein Restaurant in dem jemand wie ich essen kann.',
+      'Sogar das Zentrum dieser Buffetkette, ihr findet da bestimmt auch etwas.',
+      'Und wenn nicht, im selben Bezirk ist auch eine Universitaet und ein Markt voller teurer Lokale.',
+      'Ich warte also am Buffet.',
       '',
-      'Ich kann nicht zusehen wie ihr esst, das ist mir zu brutal. Ich warte da auf euch wo ich etwas essen kann.',
       'Wir haben uebrigens einen wichtigen Auftrag zu erledigen!',
       '',
       'Es geht um eine mysterioese Party...'
@@ -119,6 +141,12 @@ export const locations: Location[] = [
         nextId: '8890sd98v98sd8934nnv894908hvndfg',
       }
     ],
+    hints: [
+      'Wieviele beruehmte Vampirjaeher kennt ihr denn so?',
+      'Es geht nicht um den Hof fuer den er gearbeitet hat.',
+      'Die Ruprechtskirche ist die aelteste Kirche in Wien - schaut mal da in der Umgebung nach einem "Hof".',
+      'Ihr muesst zum van Swieten Hof in der Rotenturmstrasse 19.'
+    ],
     position: {
       latitude: 48.21061466967007,
       longitude: 16.37470521598213
@@ -132,7 +160,7 @@ export const locations: Location[] = [
       '',
       'Wie, wohin?',
       'Natuerlich zum Hof des beruehmtesten Vampirjaegers Wiens!',
-      '',
+      'Vielleicht schau ich mir vorher noch die aelteste Kirche Wiens an, die ist da gleich um die Ecke.',
       'Wir treffen uns dann dort, ja?',
     ],
   },
@@ -149,6 +177,12 @@ export const locations: Location[] = [
       latitude: 48.18965209658004,
       longitude: 16.414155250266678
     },
+    hints: [
+      'Wo waren wir denn schoneinmal eingesperrt?',
+      'Und wo ist man hoffentlich weniger als eine Stunde?',
+      'Ein Ort von deman entkommen muss.',
+      'Ihr muesst zum Masters of Escape bei der U3 Erdberg.'
+    ],
     paragraphs: [
       'Schlechte Nachrichten Leute. Es hat sich herausgestellt, dass es ein Problem mit diesem van Swieten gibt.',
       'Erstens ist er schon lange tot.',
@@ -172,13 +206,20 @@ export const locations: Location[] = [
     next: [
       {
         player: 'any',
-        nextId: '0812hj0nd123nf453b34yvb1o3yg34rvb1i4fb',
+        nextId: '78923bn2345c297234fccwed234sdfgfv',
       }
     ],
     position: {
       latitude: 48.20227065199294,
       longitude:  16.39230540974233
     },
+    hints: [
+      'Paul hat sich verraten - was koenntet ihr denn auf eine Karte zeichnen?',
+      'Wenn man Punkte verbindet, ergibt sich ein Bild.',
+      'Mit welchem Symbol markiert man ueblicherweise einen Ort?',
+      'Wo waren wir schoneinmal, wo ich urspruenglich nicht hinwollte',
+      'Ihr muesst zum Ballsaal im dritten Bezirk.'
+    ],
     paragraphs: [
       'Ha!',
       'Ihr Narren.',
@@ -191,6 +232,7 @@ export const locations: Location[] = [
       '',
       'Und wie bei jedem guten, boesen, Plan steckt hinter den Fallen in die ich euch geleitet habe ein Hinweis!',
       'Ein Zeichen dass auf den Ort hinweist, an dem ich Dagobert gefangen halte!',
+      'Wie passend von mir, ihn an einem Ort gefangen zu halten an den ihr ihn auch schon einmal entfuehrt habt!',
       'Welches Zeichen? So leicht lasse ich mir nicht auf die Karte zeichen.',
       '',
       '',
@@ -201,6 +243,10 @@ export const locations: Location[] = [
   {
     name: 'Des Pudels Kern',
     id: '78923bn2345c297234fccwed234sdfgfv',
+    hints: [
+      'Na wer ist der Meister von Elenas, Jeremiah, Dagoberts und Pauls, ihres Erzfeindes(!), Geschichte?',
+      'TOBIAS. Leute. So lang is es jetzt auch nicht her.'
+    ],
     next: [
       {
         player: 'any',
@@ -213,11 +259,10 @@ export const locations: Location[] = [
       'Noch tiefer in die Falle.',
       'Eine Falle in der Falle in die man nur fallen kann im Falle, dass die Falle euch nicht zu Fall gebracht haben solle!',
       '',
-      'Eine Falle so perfiede, dass nur ICH sie mir ausdenken konnte',
-      'Ich, der meister der eurer Geschichte!',
-      'Der Herr und Erzfeind alle Vampire!',
+      'Eine Falle so perfiede, dass nur er sie sich ausdenken konnte',
+      'Er, der Meister unserer Geschichte!',
       '',
-      'Und nur mein Name, den ihr bestimmt wisst und an den ich und ihr euch sicher erinnern koennt, oeffnet das Kryptex!',
+      'Und nur dieser Name oeffnet das Kryptex!',
       'Das Kryptex, der zentrale Gegenstand um den es in dieser ganzen Geschichte ging, den ihr die ganze Zeit dabei hattet!',
     ],
     solution: 'ponyschlecken'
@@ -228,6 +273,12 @@ export const locations: Location[] = [
         player: 'any',
         nextId: '9247835y9234hcnm2397h0fbn283ndsaf',
       }
+    ],
+    hints: [
+      'HAHAHAHAHA',
+      'Er hat euch nichteinmal eine Aufgabe gestellt. Das ist eigentlich geschummelt...',
+      'Warum solltet ihr dann nicht schummeln?',
+      'benutzt einfach die Schummelfunktion.'
     ],
     name: 'Paul.',
     id: 'asdfbn9pt7345nvp79w4bn0gn78werv',
@@ -241,10 +292,10 @@ export const locations: Location[] = [
       'KEINEN!',
       '',
       'Ihr seid hier fuer immer gefangen!',
-      'AHAHAHAHAHAHAHAHAHAHAHAHAHAHA'.repeat(100),
+      'AHAHAHAHAHAHAH'.repeat(100),
     ],
     skipText: [
-      'keinen!',
+      'nicht einmal hier!',
       'wirklich!',
       'nein, wirklich wirklich!',
       'lass das!',
@@ -252,79 +303,217 @@ export const locations: Location[] = [
     ]
   },
   {
-    name: 'AHAHAHAHAHA',
+    name: 'Reingelegt! HAHAHA',
     id: '9247835y9234hcnm2397h0fbn283ndsaf',
+    hints: [
+      'Scheinbar kommt IHR hier nicht raus.',
+      'Woher weiss diese "Falle" denn, wer du bist?',
+      'Und wer muesstest du sein um hier raus zu kommen?',
+      'Ersetze deinen Namen in der Adresse durch "paul" und versuch nocheinmal zu entkommen.'
+    ],
     next: [
       {
-        player: 'any',
+        player: 'paul',
         nextId: 'df345trvr3fr43453asdf23423f4c23kltg',
+      },
+      {
+        player: 'any',
+        nextId: '9247835y9234hcnm2397h0fbn283ndsaf',
       }
     ],
     paragraphs: [
+      'Nur ich selbst kann aus dieser Falle entkommen!',
       'AHAHAHAHAHAHAHAHAHAHAHAHAHAHA'.repeat(100),
     ],
     skipText: [
-      'HAHAHAHAHAHAHA',
-      'AAAAHAHAHAHAHA!',
-      'HAAAAHA haa',
-      'ha ... haha',
-      'haha h... ufff'
+      'Der Ausweg!',
     ]
   },
   {
-    name: '*Keuch*',
+    name: 'Liebes Tagebuch',
     next: [
       {
         player: 'any',
-        nextId: '102381902jdj123dnc12012l3kbyercx4',
+        nextId: 'a012838dyb120b3bdn291mwkmd123893d7nm12',
       }
+    ],
+    hints: [
+      'Stellt nocheinmal TOBIAS ein und schaut mal was sonst so auf den Raedern steht.',
+      'Ja es ist falsch geschrieben - aber what are the Chances.',
+      'Da steht "JERY QI"!'
     ],
     id: 'df345trvr3fr43453asdf23423f4c23kltg',
     paragraphs: [
-      'Ha...ufff',
-      '',
-      'Ihr seid ja immernoch da.',
-      'Ich werd langsam heiser. Es war nie gedacht, dass ich solange in der Geschichte vorkomme.',
-      'Und ihr habt bestimmt noch nicht einmal bemerkt, wie ich euch mit dem Kryptex heimlich erneut gedemuetigt habe!',
-      '',
-      'Ha, "Herr Doktor Jeremiah Boehring", Sie Schlumpf!',
-      'Als Sie die Loesung eingestellt haben, haben sie sich selbst das Schlimmste angetan, dass ihnen jemals jemand antun konnte!',
-      '',
-      'Ich meine, abgesehen von den Anschlaegen auf ihr Leben.',
-      'Und als da ihre Kollegin erschossen wurde.',
+      'Heute habe ich ein Raetsel fuer Elena und Jeremiah enwickelt, auf das ich wahnsinnig stolz bin.',
+      'Sie muessen ein Kryptex auf TOBIAS einstellen!',
+      'Was daran so toll sein soll?',
+      'Hihi',
+
+      'Ich hoffe "Doktor Boehring" hat es selbst eingestellt.',
+      'Der wird sich so aergern wenn ihm auffaellt, was er damit an einer anderen Stelle auch geschrieben hat.',
+      'Das wird der schlimmste Moment in seinem Leben!',
+      'Ich meine, abgesehen von den Anschlaegen.',
+      'Und als da seine Kollegin erschossen wurde.',
       'Ah, und die Suspendierung.',
-      'Und als ihr Freund ausgeraubt wurde.',
+      'Und als sein alter Freund ausgeraubt wurde.',
       'Die Messerstecherei.',
       'Das mit der Wohnung...',
       '',
       'Ja, nein.',
-      'Aber trotzdem unter den schlimmsten 7 Dingen die ihnen jemals angetan wurden!',
-      'Ah, das mit ihren Eltern und...',
-      'Unter den schlimmsten zehn bis zwanzing Dingen die Ihnen jemals angetan wurden!',
+      'Aber trotzdem unter den schlimmsten 7 Dingen die ihm jemals angetan wurden!',
+      'Ah, das mit seinen Eltern und...',
+      'Unter den schlimmsten zehn bis zwanzing Dingen die ihm jemals angetan wurden!',
       '',
-      'Und um zu beweisen, dass Sie meine ultimative Demuetigung gelesen haben, sagen Sie mir was nach meiner Beleidugung steht!'
+      'Und im mich immer daran zu erinnern, werde ich diese Seite nur umblaettern wenn ich die Buchstaben eingebe, die nach dieser Bombastischen Demuetigung stehen.'
     ],
     solution: 'QI',
   },
   {
-    name: 'Immernoch da?',
-    next: [],
-    id: '102381902jdj123dnc12012l3kbyercx4',
+    name: 'Liebes Tagebuch',
+    next: [
+      {
+        player: 'any',
+        nextId: '012838dyb120b3bdn291mwkmd123893d7nm12',
+      }
+    ],
+    hints: [
+      'umblaettern'
+    ],
+    skipText: [
+      'umblaettern'
+    ],
+    id: 'a012838dyb120b3bdn291mwkmd123893d7nm12',
     paragraphs: [
-      'Ha hab ich Sie drangekriegt Jery!',
+      'Ich habe die Fallen fuer Elena, Jeremiah jetzt fertig.',
+      'Diesmal bekomme ich sie bestimmt.',
+      'Wenn die wuessten!',
       '',
-      'Wie, ihr seid immernoch da?',
-      'Nach all meinen Fallen und Demuetigungen?',
+      'Wenn die wuessten wie gern ich sie hab.',
+      'Aber so ist nunmal das Leben als Erzfeind.',
+      'Wenn ich versuchen muss die zu fangen und zu schickanieren, damit ich Zeit mit ihnen verbringen kann, dann werde ich das eben tun!',
       '',
-      'Sind wir durch unsere ewige Feindschaft irgendwie zusammengewachsen?',
-      '',
-      'Also ich geb zu, ohne euch wuerde mir schon etwas fehlen im Leben.',
-      '',
-      'Ja, eigentlich bin ich richtig froh, dass ich euch getroffen und die chaotische Reise mitgemacht hab.',
-      '',
-      'Was sagt ihr, lassen wir das fuer heute und ich lad euch einfach zum Essen ein?',
+      'Dabei wollte ich doch immer nur, dass mir jemand einfach sagt "Ich hab dich lieb".',
+      'So, jetzt muss ich aber weiter - ich muss noch ein paar Leute engagieren, die den bieden sinnlose Auftraege erteilen die zu nichts fuehren.',
     ]
-  }
+  },
+  {
+    name: 'Eine leere Seite',
+    next: [
+      {
+        player: 'any',
+        nextId: 'gg3g346gh3465h4hgergertg43',
+      },
+    ],
+    hints: [
+      'Paul hat noch nicht weitergeschrieben.',
+      'Zeit das Buch zuzumachen.'
+    ],
+    id: '012838dyb120b3bdn291mwkmd123893d7nm12',
+    paragraphs: [
+      '',
+    ],
+    skipText: [
+      'Buch schliessen'
+    ],
+  },
+  {
+    name: 'Hm',
+    next: [
+      {
+        player: 'any',
+        nextId: '123o4m346m34ntmdd23snfsdv',
+      },
+      {
+        player: 'paul',
+        nextId: '012838dyb120b3bdn291mwkmd123893d7nm12',
+      }
+    ],
+    hints: [
+      'Paul muss gerade nichts weiter tun als auf euch zu warten.',
+      'Vielleicht solltet ihr mal wieder in eure eigene Geschichte wechseln.'
+    ],
+    id: 'gg3g346gh3465h4hgergertg43',
+    paragraphs: [
+      'dum di dum.',
+      '',
+      '*hust*'
+    ],
+    skipText: [
+      'weitermachen'
+    ],
+  },
+  {
+    name: 'Wie habt ihr das geschafft?',
+    next: [
+      {
+        player: 'any',
+        nextId: '1hu23oih12fnnsdasdifn34un',
+      },
+    ],
+    hints: [
+      'Paul hat noch nicht weitergeschrieben.',
+      'Vielleicht solltet ihr mal wieder in eure eigene Geschichte wechseln.'
+    ],
+    id: '123o4m346m34ntmdd23snfsdv',
+    solution: 'Ich hab dich lieb',
+    paragraphs: [
+      'Nur ich sollte entkommen koennen!',
+      '',
+      'Ihr Ratten! Aber was ihr nicht wisst, SIE Dr. Boehring, haben sich beim Loesen meines Kryptext selbst auf unglaublich peinliche weise zum Gespoett gemacht!',
+      'Sie haben naemlich als die die Loesung eingestellt haben ohne es zu wissen...',
+      '',
+      'Wie, Sie wussten das schon?',
+      'Moment mal! Haben Sie etwa? Nein, das ist zu gut versteckt!',
+      '',
+      'Offenbar habe ich ihre Faehigkeiten unterschaetzt!',
+      'Ihre Faehigkeiten sich selbst zu Demuetigen! HAHA!',
+      '',
+      'Am Ende bin ich ihnen immernoch in allen Belangen ueberleben und es gibt nichts, dass Sie sagen oder tun koennten um mich zu bezwingen!'
+    ]
+  },
+  {
+    name: 'Was?',
+    next: [
+      {
+        player: 'any',
+        nextId: 'theEnd',
+      }
+    ],
+    hints: [
+    ],
+    id: '1hu23oih12fnnsdasdifn34un',
+    skipText: [
+      'ja!'
+    ],
+    paragraphs: [
+      'Was?',
+      'Das ist ja ein geradezu laecherlicher Versuch!',
+      '',
+      '...',
+      'Ein gerade zu laecherlicher Versuch von mir zu tun als waere ich nicht ergriffen!',
+      'Aber heisst das, ich muss garkeine komplizierten Fallen stellen, damit wir gemeinsam etwas unternehmen koennen?',
+      '',
+      'Es macht aber schon Spass irgendwie.',
+      'Also wenn ihr moechtet koennen wir das gern trotzdem weiter so machen...',
+    ]
+  },
+  {
+    name: 'The End ...?',
+    next: [
+    ],
+    hints: [
+    ],
+    id: 'theEnd',
+    paragraphs: [
+      'Und so Endet unsere Geschichte',
+      '',
+      'Ich hoffe es hat alles funktioniert und ihr hattet Spass.',
+      '',
+      'Nach dem ganzen herumgerenne hat ihr bestimmt Hunger, oder Durst, oder euch ist kalt oder heiss!',
+      '',
+      'Ich hab mich solange einmal an einen Tisch im LOKAL gesetzt und warte auf euch.'
+    ]
+  },
 ]
 
 
