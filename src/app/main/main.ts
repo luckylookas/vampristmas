@@ -12,16 +12,17 @@ import {
 } from '@angular/core';
 import {locations, metersAway, Location, Position} from '../locations';
 import {MatButton} from '@angular/material/button';
-import {DecimalPipe} from '@angular/common';
+import {DecimalPipe, JsonPipe} from '@angular/common';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {MatChip} from '@angular/material/chips';
 import {MatIcon} from '@angular/material/icon';
-import {map} from 'rxjs';
+import {config, map} from 'rxjs';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
 import {MatProgressBar} from '@angular/material/progress-bar';
 import {MatFormField, MatInput, MatLabel} from '@angular/material/input';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 export const WINDOW = new InjectionToken<Window>(
   'Window global object',
@@ -61,12 +62,13 @@ export class Main {
   private navigator = inject(NAVIGATOR);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
+  private snackBar = inject(MatSnackBar);
 
   position: ResourceRef<Position|undefined> = resource({
     params: () => ({}),
     defaultValue: undefined,
-    loader: () =>
-      !this.busy() ? Promise.resolve(undefined) :
+    loader: () => {
+      return !this.busy() ? Promise.resolve(undefined) :
         new Promise((ok, fail) => {
           this.navigator.geolocation.getCurrentPosition(
             success => {
@@ -78,25 +80,23 @@ export class Main {
               enableHighAccuracy: true,
             })
         })
+    }
 
   })
 
   currentLocation = toSignal(this.route.queryParamMap.pipe(
-    map(it => it.get('id') ?? locations[0].id),
+    map(it => it.get('station') ?? locations[0].id),
     map(it =>  locations.find(c => c.id === it) ?? locations[0])
   ), {initialValue: locations[0]})
 
   player = toSignal(this.route.queryParamMap.pipe(
-    map(it => it.get('player') ?? 'any')), {initialValue: 'any'});
-
+    map(it => it.get('ich') ?? 'any')), {initialValue: 'any'});
 
   nextLocation = computed(() => {
     const nextId = this.currentLocation().next.find(n => n.player === this.player())?.nextId
     ?? this.currentLocation().next.find(n => n.player === 'any')?.nextId
     ?? locations[0].id
-
     return locations.find(it => it.id === nextId) ?? locations[0];
-
   });
 
 
@@ -115,8 +115,8 @@ export class Main {
   success = computed(() => this.reachedLocation() || this.solvedPuzzle())
 
   readonly defaultSkipText = [
-    'einfach weiter bitte',
-    'wirklich?'
+    'ueberspringen',
+    'sicher?',
   ]
   busy = signal(false)
   skipText = computed(() => this.currentLocation().skipText ?? this.defaultSkipText)
@@ -128,8 +128,9 @@ export class Main {
 
     this.skipped.set(0)
     this.position.set(undefined)
+    this.currentHintIndex.set(0)
     this.guess.set('')
-    this.router.navigate([''], {queryParams: {player: this.player(), id: this.nextLocation().id}})
+    this.router.navigate([''], {queryParams: {ich: this.player(), station: this.nextLocation().id}})
   }
 
 
@@ -152,6 +153,15 @@ export class Main {
     });
   }
 
+  currentHintIndex = signal(0)
+
+  public moreHints() {
+    this.openSnackBar(this.currentLocation().hints[this.currentHintIndex()])
+
+    if (this.currentHintIndex()+1 < this.currentLocation().hints.length) {
+      this.currentHintIndex.set(this.currentHintIndex() + 1)
+    }
+  }
 
   public thereYet() {
     this.busy.set(true)
@@ -162,6 +172,11 @@ export class Main {
     if (this.skipped() === this.skipText().length) {
      this.advance()
     }
+  }
 
+  openSnackBar(message: string) {
+    this.snackBar.open(message, "ok...", {
+      duration: 5000,
+    });
   }
 }

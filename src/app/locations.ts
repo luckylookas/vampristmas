@@ -142,10 +142,10 @@ export const locations: Location[] = [
       }
     ],
     hints: [
-      'Wieviele beruehmte Vampirjaeher kennt ihr denn so?',
+      'Wieviele beruehmte Vampirjaeger kennt ihr denn so?',
       'Es geht nicht um den Hof fuer den er gearbeitet hat.',
       'Die Ruprechtskirche ist die aelteste Kirche in Wien - schaut mal da in der Umgebung nach einem "Hof".',
-      'Ihr muesst zum van Swieten Hof in der Rotenturmstrasse 19.'
+      'Ihr muesst zum Van Swieten Hof in der Rotenturmstrasse 19.'
     ],
     position: {
       latitude: 48.21061466967007,
@@ -180,7 +180,7 @@ export const locations: Location[] = [
     hints: [
       'Wo waren wir denn schoneinmal eingesperrt?',
       'Und wo ist man hoffentlich weniger als eine Stunde?',
-      'Ein Ort von deman entkommen muss.',
+      'Ein Ort von dem man entkommen muss.',
       'Ihr muesst zum Masters of Escape bei der U3 Erdberg.'
     ],
     paragraphs: [
@@ -366,7 +366,7 @@ export const locations: Location[] = [
       '',
       'Und im mich immer daran zu erinnern, werde ich diese Seite nur umblaettern wenn ich die Buchstaben eingebe, die nach dieser Bombastischen Demuetigung stehen.'
     ],
-    solution: 'QI',
+    solution: 'qi',
   },
   {
     name: 'Liebes Tagebuch',
@@ -392,7 +392,7 @@ export const locations: Location[] = [
       'Aber so ist nunmal das Leben als Erzfeind.',
       'Wenn ich versuchen muss die zu fangen und zu schickanieren, damit ich Zeit mit ihnen verbringen kann, dann werde ich das eben tun!',
       '',
-      'Dabei wollte ich doch immer nur, dass mir jemand einfach sagt "Ich hab dich lieb".',
+      'Dabei wollte ich doch immer nur, dass mir jemand einfach sagt "ich hab dich lieb".',
       'So, jetzt muss ich aber weiter - ich muss noch ein paar Leute engagieren, die den bieden sinnlose Auftraege erteilen die zu nichts fuehren.',
     ]
   },
@@ -425,7 +425,7 @@ export const locations: Location[] = [
       },
       {
         player: 'paul',
-        nextId: '012838dyb120b3bdn291mwkmd123893d7nm12',
+        nextId: 'gg3g346gh3465h4hgergertg43',
       }
     ],
     hints: [
@@ -451,11 +451,11 @@ export const locations: Location[] = [
       },
     ],
     hints: [
-      'Paul hat noch nicht weitergeschrieben.',
-      'Vielleicht solltet ihr mal wieder in eure eigene Geschichte wechseln.'
+      'Hier hilft euch wirklich nichts weiter!',
+      'Nur wenn ihr mein Tagebuch gelesen haettet, haettet ihr eine Chance!'
     ],
     id: '123o4m346m34ntmdd23snfsdv',
-    solution: 'Ich hab dich lieb',
+    solution: 'ich hab dich lieb',
     paragraphs: [
       'Nur ich sollte entkommen koennen!',
       '',
@@ -502,6 +502,9 @@ export const locations: Location[] = [
     next: [
     ],
     hints: [
+      'Woher weiss das Spiel denn wo ihr gerade hinmuesst oder seid?',
+      'Schau mal da wo auch steht wer du gerade bist.',
+      'Ich hab einen Tisch im Motto am Fluss reserviert.'
     ],
     id: 'Motto_am_Fluss',
     paragraphs: [
@@ -512,7 +515,10 @@ export const locations: Location[] = [
       '',
       'Nach dem ganzen herumgerenne hat ihr bestimmt Hunger, oder Durst, oder euch ist kalt oder heiss!',
       '',
-      'Ich hab mich solange einmal an einen Tisch hier gesetzt und warte auf euch.'
+      'Ich hab mich solange einmal an einen Tisch hier gesetzt und warte auf euch.',
+      'Wenn ihr rechtzeitig heir seid, seid ich eingeladen!',
+      'Wo ist hier?',
+      'Na ein Raetsel muss schon noch sein.'
     ]
   },
 ]

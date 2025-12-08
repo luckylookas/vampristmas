@@ -1,54 +1,79 @@
-<div id="container">
+@if (player() === 'lukas') {
+  <h1>ach bitte.</h1>
+  <p>
+    Was dachstest du, dass jetzt passiert?
+  </p>
+  <p>
+    Willst du einfach die Loesung?
+  </p>
+  <p>
+    Ach Unsinn, du weisst die Loesung ja sowieso schon, oder "Lukas"?
+  </p>
+} @else {
 
+  <div id="container">
 
-  <h1>{{ currentLocation().name }}</h1>
+    <h1>{{ currentLocation().name }}</h1>
 
-  <div id="text">
-    @for (paragraph of currentLocation().paragraphs; track $index) {
-      <p>{{ paragraph }}</p>
-    }
+    <div id="text">
+      @for (paragraph of currentLocation().paragraphs; track $index) {
+        <p>{{ paragraph }}</p>
+      }
+    </div>
+
   </div>
 
-</div>
+  <div id="cheat">
+
+    <div id="info">
+
+      @if (busy()) {
+        <p>getting geo location</p>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+      }
+
+      @if (currentLocation().position && distanceToTarget() != undefined) {
+        <p>noch {{ distanceToTarget() | number: '1.0-0' }} m</p>
+      }
+
+      @if (currentLocation().solution && guess() !== currentLocation().solution && guess()) {
+        <p>da stimmt etwas nicht ganz...</p>
+      }
+    </div>
+
+    <div id="buttons">
+
+      @if (currentLocation().solution) {
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Guess</mat-label>
+          <input matInput placeholder="guess" [(ngModel)]="guess">
+        </mat-form-field>
+
+      }
 
 
-<div id="cheat">
+      @if (!done() && currentLocation().position && !busy()) {
+        <button matButton="elevated" (click)="thereYet()">Bin ich schon da?</button>
+      }
+
+      <div style="display: flex; gap: 10pt;">
+        <button matButton="elevated" (click)="moreHints()">
+          @if (currentHintIndex() + 1 >= currentLocation().hints.length) {
+            Loesung
+          } @else {
+            Hilfe
+          }
+        </button>
+        @if (!done()) {
 
 
-  <div id="info">
+          <button matButton="elevated" (click)="skip()">{{ skipText()[skipped()] }}</button>
+        }
+      </div>
 
-    @if (busy()) {
-      <p>getting geo location</p>
-      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
-    }
+    </div>
 
-    @if (currentLocation().position && distanceToTarget() != undefined) {
-      <p>noch {{ distanceToTarget() | number: '1.0-0' }} m</p>
-    }
 
-    @if (currentLocation().solution && guess() !== currentLocation().solution && guess()) {
-      <p>da stimmt etwas nicht ganz...</p>
-    }
   </div>
-
-  <div id="buttons">
-
-    @if (currentLocation().solution) {
-
-      <mat-form-field class="example-full-width">
-        <mat-label>Guess</mat-label>
-        <input matInput placeholder="guess" [(ngModel)]="guess">
-      </mat-form-field>
-
-    }
-
-    @if (!done() && currentLocation().position && !busy()) {
-      <button matButton="elevated" (click)="thereYet()">Bin ich schon da?</button>
-    }
-
-
-    @if (!done()) {
-        <button matButton="elevated" (click)="skip()">{{ skipText()[skipped()] }}</button>
-    }
-  </div>
-</div>
+}
