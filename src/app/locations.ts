@@ -602,7 +602,7 @@ export const locations: Location[] = [
       'Offenbar habe ich ihre Fähigkeiten unterschätzt!',
       'Ihre Fähigkeiten sich selbst zu Demütigen! HAHA!',
       '',
-      'Am Ende bin ich ihnen immernoch in allen Belangen überleben und es gibt nichts, dass Sie sagen oder tun könnten um mich zu bezwingen!'
+      'Am Ende bin ich ihnen immernoch in allen Belangen überlegen und es gibt nichts, dass Sie sagen oder tun könnten um mich zu bezwingen!'
     ]
   },
   {
