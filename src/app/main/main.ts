@@ -111,11 +111,11 @@ export class Main {
 
 
   reachedLocation = computed(() => this.currentLocation().position != undefined && this.distanceToTarget()! < this.thresholdMeters)
-  solvedPuzzle = computed(() => this.solutionForPuzzle() != undefined && this.guess() === this.solutionForPuzzle())
+  solvedPuzzle = computed(() => this.solutionForPuzzle() != undefined && this.guess().toLowerCase() === this.solutionForPuzzle().toLowerCase())
   success = computed(() => this.reachedLocation() || this.solvedPuzzle())
 
   readonly defaultSkipText = [
-    'ueberspringen',
+    'überspringen',
     'sicher?',
   ]
   busy = signal(false)

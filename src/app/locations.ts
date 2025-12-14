@@ -55,7 +55,7 @@ export const locations: Location[] = [
       'Nach dem letzten Hinweis, bekommt ihr die Lösung.'
     ],
     skipText: [
-      'was Anderes'
+      'etwas Anderes'
     ],
     paragraphs: [
       'Manchmal steht auf dem Knopf etwas Anderes, oder mehrmals drücken ist nicht nötig.',
@@ -78,7 +78,7 @@ export const locations: Location[] = [
     ],
     skipText: ['weiter'],
     paragraphs: [
-      'Wenn ihr nicht weiterkommt, aber denkt, dass das Spiel eigentlich funktioniert, könnt ihr auch Hilfe bekommen.',
+      'Wenn ihr nicht weiterkommt aber denkt, dass das Spiel eigentlich funktioniert, könnt ihr Hilfe bekommen.',
       'Jedes Mal wenn ihr den Knopf drückt, bekommt ihr einen neuen Hinweis',
       'Der letzte Hinweis ist immer die Lösung.'
     ],
@@ -97,16 +97,12 @@ export const locations: Location[] = [
       'Gibt "die richtige lösung" ein',
     ],
     paragraphs: [
-      'Wenn ihr aber nicht zufrieden damit seid, 5 Minuten nur "überspringen" zu drücken, hab ich auch ein paar Rätsel eingebaut!',
+      'Wenn ihr nicht zufrieden damit seid, 5 Minuten nur "überspringen" zu drücken, hab ich auch ein paar Rätsel eingebaut!',
       '',
-      'Wenn es unten eine Möglichkeit gibt, etwas einzugeben, dann springt das Spiel sofort weiter, wenn ihr die richtige Lösung eingegeben habt.',
-      'Ihr müsst nicht Enter oder Weiter oder so drücken.',
-      '',
-      'WICHTIG:',
-      'Weil ich faul bin und eine englische Tastatur hab, gibt es keine Umlaute und alle Lösungen in deisem Spiel werden immer klein geschrieben.'
-
+      'Unten gibt es manchmal die Möglichkeit etwas einzutippen. Das Spiel geht sofort weiter, wenn ihr die richtige Lösung eingegeben habt.',
+      'Gross- und Kleinschreibung sind egal.',
     ],
-    solution: 'die richtige loesung',
+    solution: 'die richtige lösung',
     next: [
       {
         player: 'any',
@@ -125,17 +121,16 @@ export const locations: Location[] = [
     ],
     paragraphs: [
       'Zuerst mal, keine Panik. Das Spiel schickt euren Standort nie irgendwo hin, alles passiert nur auf eurem Handy.',
-      'Ihr könntet sobald ihr diese Seite offen habt sogar das Internet abdrehen.',
       'Ausserdem fragt das Spiel den Standort nur einmalig ab, wenn ihr den Knopf drückt.',
       '',
       'Wo das gesagt ist - für einige Rätsel müsst ihr einen Ort in Wien finden.',
-      'Dafür knobelt ihr aus, wo ihr denkt, dass ihr hinmüsst. Dann fahrt ihr dahin und drückt "bin ich schon da?"',
+      'Wenn ihr glaubt, dass ihr angekommen seid, oder wenn ihr wissen wollt, ob ihr am richtigen Weg seid, fragt einfach ob hr schon da seid.',
       '',
       'Wenn ihr 50 Meter an das Ziel herankommt, geht das Spiel weiter.',
       'Davor sagt euch der Knopf wie weit ihr vom Ziel entfernt seid.',
       '',
-      'Ihr könnt den Knopf so oft drücken wie ihr wollt um zu checken ob ihr dem Ziel wirklich näher kommt.',
-      'In dem Beispiel ist das Ziel der Stephansdom - da ihr da jetzt nicht hinfahren werdet, benutzt einfach mal "weiter".'
+      'Ihr könnt den Knopf so oft drücken wie ihr wollt.',
+      'In dem Beispiel ist das Ziel der Stephansdom - wenn ihr da jetzt nicht hinfahren wollt, benutzt ausnahmsweise "weiter".'
     ],
     position: {
       latitude: 48.2050491798,
@@ -158,10 +153,10 @@ export const locations: Location[] = [
       'los gehts!'
     ],
     paragraphs: [
-      'Gibt es vielleicht noch andere Rätsel? Wer weiss.',
+      'Gibt es noch andere Rätsel? Vielleicht.',
       '',
       'Wenn ihr etwas nicht versteht oder etwas überhaupt nicht funktionieren sollte, müsst ihr mich anrufen!',
-      'Und jetzt hoff ich ihr habt Spass!'
+      'Und jetzt los!'
     ],
     next: [
       {
@@ -186,11 +181,10 @@ export const locations: Location[] = [
       'An einem lauen Abend, früh im Sommer, finden sich ein paar Menschen eben da ein, wo ich euch jetzt noch einmal hin schicke.',
       'Und dabei wäre ich damals fast nicht aufgetaucht!',
       'Drei Mal hatte ich solche Treffen schon ausprobiert und drei Mal wäre ich eigentlich lieber woanders gewesen.',
-      'Und trotzdem hab’ ich mich aufgerafft.',
-      'Einmal noch, hab ich mir gedacht, ein Mal probier’ ich’s noch aus.',
-      'Und wisst ihr was? War schon eine gute Zeit.',
+      'Und trotzdem hab ich mich aufgerafft.',
+      'Einmal noch, hab ich mir gedacht, ein Mal probier ich’s noch aus.',
       '',
-      'Treffen wir uns da?'
+      'Und wisst ihr was? War schon eine gute Zeit.',
     ],
     next: [
       {
@@ -208,14 +202,14 @@ export const locations: Location[] = [
       'Hier wurde ich, Dagobert, das zweite Mal geboren.',
       'Und mit mir begann hier eine lange und verwirrende Konversation.',
       '',
-      'Was war denn nochmal das Erste, das in dieser Konversation gesagt wurde?'
+      'Es gab kurzlebige Geheimsprachen und den besten Witz der Witzgeschichte.',
+      'Dann gab es einen Aufstand indem sich mehrere Rebellengruppen gebildet haben...',
+      'Aber was war denn nochmal das Erste, das in dieser Konversation gesagt wurde?'
     ],
     solution: '04.07',
     hints: [
       'Ihr müsst euch an nichts erinnern können.',
-      'Die Konversation ist schriftlich fest gehalten.',
-      'Ihr habt sie immer dabei.',
-      'Es geht um die erste Nachricht in der Viva la Seestadt Gruppe.',
+      'Viva la Seestadt!.',
       'Tobi hat als erstes direkt nur "04.07" geschrieben.'
     ],
     next: [
@@ -246,7 +240,7 @@ export const locations: Location[] = [
       longitude: 16.366976926984005
     },
     paragraphs: [
-      'Genau! manchmal hab ich ein Gedächtnis wie Elena.',
+      'Genau! Manchmal hab ich ein Gedächtnis wie Elena.',
       'Naja wo war ich? Ach ja.',
       'Bei allem was schön ist an meinem neuen Leben, eines ist doch immer mühseelig',
       'Essen.',
@@ -255,7 +249,7 @@ export const locations: Location[] = [
       'Fast.',
       'Ein wahres Buffet, an dem sogar ich mitessen kann!',
       'Wenn es den Namen nicht schon gäbe, wäre er wirlich eine gute Wahl für ein Restaurant in dem jemand wie ich essen kann.',
-      'Sogar das Zentrum dieser Buffetkette, ihr findet da bestimmt auch etwas.',
+      'In Wien ist sogar das Zentrum dieser Buffetkette, ihr findet da bestimmt auch etwas.',
       'Und wenn nicht, im selben Bezirk ist auch eine Universität und ein Markt voller teurer Lokale.',
       'Ich warte also am Buffet.',
       '',
@@ -284,7 +278,7 @@ export const locations: Location[] = [
       longitude: 16.37470521598213
     },
     paragraphs: [
-      'Gut, dass ihr da seid! Mir wurde eben gerade von einem Fremden auf der Strasse ein wichtiger Auftrag erteilt!',
+      'Gut das ihr da seid! Mir wurde eben gerade von einem Fremden auf der Strasse ein wichtiger Auftrag erteilt!',
       'Wir sollen niemandem etwas erzählen und dringend und konzentriert daran arbeiten. Wie immer also.',
       '',
       'Party? Welche Party? Wir haben jetzt keine Zeit für solchen Unsinn!',
@@ -292,7 +286,7 @@ export const locations: Location[] = [
       '',
       'Wie, wohin?',
       'Natürlich zum Hof des berühmtesten Vampirjägers Wiens!',
-      'Vielleicht schau ich mir vorher noch die älteste Kirche Wiens an, die ist da gleich um die Ecke.',
+      'Vielleicht schau ich mir vorher noch die älteste Kirche der Stadt an, die ist da gleich um die Ecke.',
       'Wir treffen uns dann dort, ja?',
     ],
   },
@@ -311,8 +305,7 @@ export const locations: Location[] = [
     },
     hints: [
       'Wo waren wir denn schoneinmal eingesperrt?',
-      'Und wo ist man hoffentlich weniger als eine Stunde?',
-      'Ein Ort von dem man entkommen muss.',
+      'Wir haben sogar bezahlt um rein zu dürfen.',
       'Ihr müsst zum Masters of Escape bei der U3 Erdberg.'
     ],
     paragraphs: [
@@ -327,7 +320,7 @@ export const locations: Location[] = [
       '',
       'Ehrlich gesagt, diese Entführer haben nicht weniger verwirrt gewirkt als ihr gerade.',
       'Das Merkwürdigste ist ja, dass sie mir gesagt haben wohin sie mich entführen!',
-      'Hat mich direkt gewundert. Dort waren wir gemeinsam schoneinmal eingesperrt und sind in weniger als einer Stunde entkommen!',
+      'Hat mich direkt gewundert. Dort waren wir gemeinsam schoneinmal eingesperrt und sind in Rekordzeit entkommen!',
       '',
       'Kommt ihr mich abholen?'
     ],
@@ -346,10 +339,9 @@ export const locations: Location[] = [
       longitude:  16.39230540974233
     },
     hints: [
-      'Paul hat sich verraten - was könntet ihr denn auf eine Karte zeichnen?',
-      'Wenn man Punkte verbindet, ergibt sich ein Bild.',
+      'Am besten mal in die Karten schauen.',
       'Mit welchem Symbol markiert man üblicherweise einen Ort?',
-      'Wo waren wir schoneinmal, wo ich ursprünglich nicht hinwollte',
+      'Der Ort is sicher ein Ort der etwas mit euch und Dagobert zu tun hat.',
       'Ihr müsst zum Ballsaal im dritten Bezirk.'
     ],
     paragraphs: [
@@ -357,26 +349,21 @@ export const locations: Location[] = [
       'Ihr Narren.',
       'Ihr seid direkt in alle meine Fallen getappt!',
       'Ich bin garnicht Dagobert, ich bin es, PAUL, euer Erzfeind!',
-      'Jaha ich sehe das Entsetzen auf euren Gesichtern. Wie kann es sein, dass dieser gewiefte Bösewicht, der uns schon so oft begegnet ist und an den wir uns immer erinnern werden, auch hinter dieser Falle steckt!?',
+      'Haha! Ich sehe das Entsetzen auf euren Gesichtern. Wie kann es sein, dass dieser gewiefte Bösewicht, der uns schon so oft begegnet ist und an den wir uns immer erinnern werden, auch hinter dieser Falle steckt!?',
       '',
       'Oh ja! Ich bin wie eine Spinne und ihr zappelt in meinem Netz!',
       'Eine vom Narrativ lange angelegte und aufgebaute Spinne die zurecht am Höhepunkt der Spannung auftritt!',
       '',
       'Und wie bei jedem guten, bösen, Plan steckt hinter den Fallen in die ich euch geleitet habe ein Hinweis!',
       'Ein Zeichen dass auf den Ort hinweist, an dem ich Dagobert gefangen halte!',
-      'Wie passend von mir, ihn an einem Ort gefangen zu halten an den ihr ihn auch schon einmal entführt habt!',
-      'Welches Zeichen? So leicht lasse ich mir nicht auf die Karten zeichen.',
-      '',
-      '',
-      'In die Karten schauen!',
-      'Ach verdammt.'
+      'Welches Zeichen? So leicht lasse ich mir nicht in die Karten schauen!',
     ]
   },
   {
     name: 'Des Pudels Kern',
     id: '78923bn2345c297234fccwed234sdfgfv',
     hints: [
-      'Na wer ist der Meister von Elenas, Jeremiah, Dagoberts und Pauls, ihres Erzfeindes(!), Geschichte?',
+      'Na wer ist der Meister von Elenas, Jeremiah, Dagoberts und Pauls, ihres bekannten Erzfeindes(!), Geschichte?',
       'TOBIAS. Leute. So lang is es jetzt auch nicht her.'
     ],
     next: [
@@ -389,14 +376,14 @@ export const locations: Location[] = [
       'Ihr habt mein Rätsel also lösen können!?',
       'Damit seit ihr erneut in meine Falle getappt.',
       'Noch tiefer in die Falle.',
-      'Eine Falle in der Falle in die man nur fallen kann im Falle, dass die Falle euch nicht zu Fall gebracht haben solle!',
+      'Eine Falle in der Falle in die man nur fallen kann im Fall, dass die Falle euch nicht zu Fall gebracht haben solle!',
       '',
-      'Eine Falle so perfiede, dass nur er sie sich ausdenken konnte',
+      'Eine Falle so perfiede, dass nur er sie sich ausdenken konnte!',
       'Er, der Meister unserer Geschichte!',
       '',
-      'Und nur dieser Name öffnet das Kryptex!',
-      'Das Kryptex, der zentrale Gegenstand um den es in dieser ganzen Geschichte ging, den ihr die ganze Zeit dabei hattet!',
-      'Nur wenn ihr diesen unknackbaren Safe aufbekommt, kommt ihr auch hier weiter!'
+      'Und nur dieser Name öffnet das Siegel!',
+      'Das Siegel, der zentrale Gegenstand um den es in dieser ganzen Geschichte ging, den ihr die ganze Zeit dabei hattet und den ich nicht eben zum ersten Mal erwähnt habe!',
+      'Nur wenn ihr dieses unknackbare Schloss aufbekommt, kommt ihr auch hier weiter!'
     ],
     solution: 'ponyschlecken'
   },
@@ -411,7 +398,7 @@ export const locations: Location[] = [
       'HAHAHAHAHA',
       'Er hat euch nichteinmal eine Aufgabe gestellt. Das ist eigentlich geschummelt...',
       'Warum solltet ihr dann nicht schummeln?',
-      'benutzt einfach die Schummelfunktion.'
+      'Ueberspringt diesen Unsinn einfach.'
     ],
     name: 'Paul.',
     id: 'asdfbn9pt7345nvp79w4bn0gn78werv',
@@ -425,7 +412,7 @@ export const locations: Location[] = [
       'KEINEN!',
       '',
       'Ihr seid hier für immer gefangen!',
-      'AHAHAHAHAHAHAH'.repeat(50),
+      'AHAHAHAHAHAHAH'.repeat(100),
     ],
     skipText: [
       'nicht einmal hier!',
@@ -440,9 +427,8 @@ export const locations: Location[] = [
     id: '9247835y9234hcnm2397h0fbn283ndsaf',
     hints: [
       'Scheinbar kommt IHR hier nicht raus.',
-      'Woher weiss diese "Falle" denn, wer du bist?',
-      'Und wer müsstest du sein um hier raus zu kommen?',
-      'Ersetze deinen Namen in der Adresse durch "paul" und versuch nocheinmal zu entkommen.'
+      'Woher weiss diese Falle denn, wer du bist und wer müsstest du sein um hier raus zu kommen?',
+      'Ersetze deinen Namen in der Adresse durch "paul" und versuch nocheinmal zu entkommen.(?ich=paul&station=9247835y9234hcnm2397h0fbn283ndsaf)'
     ],
     next: [
       {
@@ -455,7 +441,7 @@ export const locations: Location[] = [
       }
     ],
     paragraphs: [
-      'Nur ich selbst kann aus dieser Falle entkommen!',
+      'Nur ich, Paul, kann aus dieser Falle entkommen!',
       'AHAHAHAHAHAHAHAHAHAHAHAHAHAHA'.repeat(50),
     ],
     skipText: [
@@ -472,8 +458,9 @@ export const locations: Location[] = [
     ],
     hints: [
       'Stellt nocheinmal TOBIAS ein und schaut mal was sonst so auf den Rädern steht.',
-      'Ja es ist falsch geschrieben - aber what are the Chances.',
-      'Da steht "JERY QI"!'
+      'Ja es ist falsch geschrieben.',
+      'Da steht "JERYQI"',
+      'gebt "qi" ein'
     ],
     id: 'df345trvr3fr43453asdf23423f4c23kltg',
     paragraphs: [
@@ -482,7 +469,7 @@ export const locations: Location[] = [
       'Was daran so toll sein soll?',
       'Hihi',
 
-      'Ich hoffe "Doktor Böhring" hat es selbst eingestellt.',
+      'Ich hoffe "Doktor Böhring" stellt es selbst ein.',
       'Der wird sich so ärgern wenn ihm auffällt, was er damit an einer anderen Stelle auch geschrieben hat.',
       'Das wird der schlimmste Moment in seinem Leben!',
       'Ich meine, abgesehen von den Anschlägen.',
