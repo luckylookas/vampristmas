@@ -412,7 +412,7 @@ export const locations: Location[] = [
       'KEINEN!',
       '',
       'Ihr seid hier für immer gefangen!',
-      'AHAHAHAHAHAHAH'.repeat(100),
+      'AHAHAHAHAHAHAH'.repeat(300),
     ],
     skipText: [
       'nicht einmal hier!',
@@ -442,7 +442,7 @@ export const locations: Location[] = [
     ],
     paragraphs: [
       'Nur ich, Paul, kann aus dieser Falle entkommen!',
-      'AHAHAHAHAHAHAHAHAHAHAHAHAHAHA'.repeat(50),
+      'AHAHAHAHAHAHAHAHAHAHAHAHAHAHA'.repeat(300),
     ],
     skipText: [
       'Der Ausweg!',

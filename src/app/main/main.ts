@@ -111,7 +111,7 @@ export class Main {
 
 
   reachedLocation = computed(() => this.currentLocation().position != undefined && this.distanceToTarget()! < this.thresholdMeters)
-  solvedPuzzle = computed(() => this.solutionForPuzzle() != undefined && this.guess().toLowerCase() === this.solutionForPuzzle().toLowerCase())
+  solvedPuzzle = computed(() => this.solutionForPuzzle() != undefined && this.guess().toLowerCase() === this.solutionForPuzzle()!.toLowerCase())
   success = computed(() => this.reachedLocation() || this.solvedPuzzle())
 
   readonly defaultSkipText = [

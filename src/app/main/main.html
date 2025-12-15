@@ -45,19 +45,19 @@
 
       @if (currentLocation().solution) {
 
-        <mat-form-field class="example-full-width">
+        <mat-form-field>
           <mat-label>Guess</mat-label>
-          <input matInput placeholder="guess" [(ngModel)]="guess">
+          <input  matInput placeholder="guess" [(ngModel)]="guess">
         </mat-form-field>
 
       }
 
-
+      <div class="help">
       @if (!done() && currentLocation().position && !busy()) {
         <button matButton="elevated" (click)="thereYet()">Bin ich schon da?</button>
       }
-
-      <div style="display: flex; gap: 10pt;">
+      </div>
+      <div class="help">
         @if(!currentLocation().id.includes('nohint')) {
           <button matButton="elevated" (click)="moreHints()">
             @if (currentHintIndex() + 1 >= currentLocation().hints.length) {
@@ -68,8 +68,6 @@
           </button>
         }
         @if (!done()) {
-
-
           <button matButton="elevated" (click)="skip()">{{ skipText()[skipped()] }}</button>
         }
       </div>
