@@ -68,7 +68,12 @@ export class Main {
   private snackBar = inject(MatSnackBar);
 
   today = signal(Date.now())
-  readonly target = Date.parse("2025-12-10")
+  readonly target = Date.parse("2025-12-27")
+  early = toSignal(this.route.queryParamMap.pipe(
+    map(it => (it.get('early') ?? 'false') === 'true'),
+  ))
+
+
   unlocked = computed(() => {
     return this.today() >= this.target
   })
