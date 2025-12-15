@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --host 0.0.0.0",
-    "build": "ng build --base-href /vamprismas/ --deploy-url /vamprismas/",
+    "build": "ng build --base-href /vampristmas/ --deploy-url /vampristmas/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
