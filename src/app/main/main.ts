@@ -75,7 +75,7 @@ export class Main {
 
 
   unlocked = computed(() => {
-    return this.today() >= this.target
+    return this.early() || this.today() >= this.target
   })
 
   left = computed(() => parseInt(`${(this.target - this.today()) / (1000*60*60*24) + 1}`))
