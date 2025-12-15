@@ -4,6 +4,7 @@
 
 html, body { height: 100%; }
 body {
+  overflow: scroll;
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   color: mat.m2-get-color-from-palette(theme.$primary-palette, 80);
