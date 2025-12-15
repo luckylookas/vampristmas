@@ -1,3 +1,6 @@
+@use '@angular/material' as mat;
+@use '../../custom-theme' as theme;
+
 :host {
   height: 100%;
   width: 100%;
@@ -30,9 +33,8 @@
 h1 {
   width: 100%;
   text-align: start;
-  color: #ffb787;
+  color: mat.m2-get-color-from-palette(theme.$primary-palette, 50);
   padding-bottom: 10px;
-  border-bottom: 2px solid #ffb787;
 }
 
 #text {
@@ -65,8 +67,8 @@ mat-form-field {
   align-items: center;
   gap: 10px;
   width: calc(100% - 20px);
-
 }
+
 
 .help {
   display: flex;

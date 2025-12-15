@@ -1,16 +1,80 @@
 
-// Include theming for Angular Material with `mat.theme()`.
-// This Sass mixin will define CSS variables that are used for styling Angular Material
-// components according to the Material 3 design spec.
-// Learn more about theming and how to use it for your application's
-// custom components at https://material.angular.dev/guide/theming
+@use 'sass:map';
 @use '@angular/material' as mat;
+@include mat.core();
+
+$_palettes: (
+  primary: (
+    0: #000000,
+    10: #410005,
+    20: #68000d,
+    25: #7d0012,
+    30: #930017,
+    35: #a9001c,
+    40: #bf0021,
+    50: #e52836,
+    60: #ff5355,
+    70: #ff8984,
+    80: #ffb3af,
+    90: #ffdad7,
+    95: #ffedeb,
+    98: #fff8f7,
+    99: #fffbff,
+    100: #ffffff,
+  ),
+  tertiary: (
+    0: #000000,
+    10: #002205,
+    20: #00390c,
+    25: #004611,
+    30: #005315,
+    35: #00601a,
+    40: #0c6e22,
+    50: #2f8839,
+    60: #4ba350,
+    70: #66be68,
+    80: #81db80,
+    90: #9cf89a,
+    95: #c8ffc1,
+    98: #ecffe5,
+    99: #f6fff0,
+    100: #ffffff,
+  ),
+  error: (
+    0: #000000,
+    10: #410002,
+    20: #690005,
+    25: #7e0007,
+    30: #93000a,
+    35: #a80710,
+    40: #ba1a1a,
+    50: #de3730,
+    60: #ff5449,
+    70: #ff897d,
+    80: #ffb4ab,
+    90: #ffdad6,
+    95: #ffedea,
+    98: #fff8f7,
+    99: #fffbff,
+    100: #ffffff,
+  ),
+);
+
+$_rest: (
+  secondary: map.get($_palettes, secondary),
+  neutral: map.get($_palettes, neutral),
+  error: map.get($_palettes, error),
+);
+
+$primary-palette: map.merge(map.get($_palettes, primary), $_rest);
+$tertiary-palette: map.merge(map.get($_palettes, tertiary), $_rest);
 
 html {
+  background-color: mat.m2-get-color-from-palette($tertiary-palette, 10) !important;
   @include mat.theme((
     color: (
-      primary: mat.$orange-palette,
-      tertiary: mat.$cyan-palette,
+      primary: $primary-palette,
+      tertiary: $tertiary-palette,
     ),
     typography: Roboto,
     density: 0,
@@ -21,7 +85,7 @@ body {
   // Default the application to a light color theme. This can be changed to
   // `dark` to enable the dark color theme, or to `light dark` to defer to the
   // user's system settings.
-  color-scheme:light  dark;
+  color-scheme: light;
 
   // Set a default background, font and text colors for the application using
   // Angular Material's system-level CSS variables. Learn more about these

@@ -1,3 +1,10 @@
+<img style="opacity: 0.05; position: fixed;"
+     ngSrc="/christmas-tree-svgrepo-com.svg" fill="100%" alt="tree"/>
+
+
+
+@if (unlocked()) {
+
 @if (player() === 'lukas') {
   <h1>ach bitte.</h1>
   <p>
@@ -44,12 +51,12 @@
     <div id="buttons">
 
       @if (currentLocation().solution) {
-
+        <div class="help">
         <mat-form-field>
           <mat-label>Guess</mat-label>
           <input  matInput placeholder="guess" [(ngModel)]="guess">
         </mat-form-field>
-
+        </div>
       }
 
       <div class="help">
@@ -57,6 +64,7 @@
         <button matButton="elevated" (click)="thereYet()">Bin ich schon da?</button>
       }
       </div>
+
       <div class="help">
         @if(!currentLocation().id.includes('nohint')) {
           <button matButton="elevated" (click)="moreHints()">
@@ -76,4 +84,9 @@
 
 
   </div>
+}
+} @else {
+  <h1>
+    Noch {{left()}} Mal schlafen...
+  </h1>
 }

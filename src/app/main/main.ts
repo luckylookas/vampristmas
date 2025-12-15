@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 import {locations, metersAway, Location, Position} from '../locations';
 import {MatButton} from '@angular/material/button';
-import {DecimalPipe, JsonPipe} from '@angular/common';
+import {DecimalPipe, formatNumber, JsonPipe, NgOptimizedImage} from '@angular/common';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {MatChip} from '@angular/material/chips';
@@ -53,16 +53,27 @@ export const NAVIGATOR = new InjectionToken<Navigator>(
     MatLabel,
     MatFormField,
     MatInput,
+    NgOptimizedImage,
   ],
   templateUrl: './main.html',
-  styleUrl: './main.css',
+  styleUrl: './main.scss',
 })
 export class Main {
+
+
   readonly thresholdMeters = 50;
   private navigator = inject(NAVIGATOR);
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private snackBar = inject(MatSnackBar);
+
+  today = signal(Date.now())
+  readonly target = Date.parse("2025-12-10")
+  unlocked = computed(() => {
+    return this.today() >= this.target
+  })
+
+  left = computed(() => parseInt(`${(this.target - this.today()) / (1000*60*60*24) + 1}`))
 
   position: ResourceRef<Position|undefined> = resource({
     params: () => ({}),
