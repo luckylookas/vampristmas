@@ -611,13 +611,6 @@ export const locations: Location[] = [
     paragraphs: [
       'Was?',
       'Das ist ja ein geradezu lächerlicher Versuch!',
-      '',
-      '...',
-      'Ein gerade zu lächerlicher Versuch von mir zu tun als wäre ich nicht gerührt!',
-      'Aber heisst das, ich muss garkeine komplizierten Fallen stellen, damit wir gemeinsam etwas unternehmen können?',
-      '',
-      'Es macht aber schon Spass irgendwie.',
-      'Also wenn ihr möchtet können wir das gern trotzdem weiter so machen...',
     ]
   },
   {
