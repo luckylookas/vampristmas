@@ -146,7 +146,11 @@ export class Main {
     this.position.set(undefined)
     this.currentHintIndex.set(0)
     this.guess.set('')
-    this.router.navigate([''], {queryParams: {ich: this.player(), station: this.nextLocation().id}})
+    if (this.early()) {
+      this.router.navigate([''], {queryParams: {ich: this.player(), station: this.nextLocation().id, early: true}})
+    } else {
+      this.router.navigate([''], {queryParams: {ich: this.player(), station: this.nextLocation().id}})
+    }
   }
 
 
