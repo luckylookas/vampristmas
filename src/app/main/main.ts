@@ -53,7 +53,6 @@ export const NAVIGATOR = new InjectionToken<Navigator>(
     MatLabel,
     MatFormField,
     MatInput,
-    NgOptimizedImage,
   ],
   templateUrl: './main.html',
   styleUrl: './main.scss',

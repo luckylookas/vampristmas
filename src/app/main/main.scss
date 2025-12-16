@@ -1,11 +1,13 @@
-@use '@angular/material' as mat;
-@use '../../custom-theme' as theme;
 
 :host {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.wide {
+  width: 100%;
 }
 
 #container {
@@ -31,21 +33,21 @@
   align-items: center;
   mask: linear-gradient(#ffffff11 1%, #ffffffff 15%, #ffffffff 100%);
   backdrop-filter: blur(2px);
-  background: map-get(mat.$green-palette, 20);
+  background: #013a00;
 }
 
 h1 {
   width: 100%;
   text-align: start;
   font-size: xxx-large;
-  text-shadow: map-get(theme.$gold-palette, 50) 1px 1px;
+  text-shadow: #a98300 1px 1px;
   padding-bottom: 10px;
 }
 
 #text {
   width: 100%;
   text-align: start;
-  overflow-wrap: normal;
+  overflow-wrap: break-word;
 
 }
 

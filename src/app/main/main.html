@@ -85,17 +85,20 @@
     <div id="info">
 
       @if (busy()) {
-        <p>getting geo location</p>
+        <p>Momentchen...</p>
         <mat-progress-bar mode="indeterminate"></mat-progress-bar>
       }
 
-      @if (currentLocation().position && distanceToTarget() != undefined) {
-        <p>noch {{ distanceToTarget() | number: '1.0-0' }} m</p>
+      @if (currentLocation().position) {
+        <p>
+          @if (distanceToTarget() != undefined) {
+            noch {{ distanceToTarget() | number: '1.0-0' }} m
+          } @else {
+            wo bin ich?
+          }
+        </p>
       }
 
-      @if (currentLocation().solution && guess() !== currentLocation().solution && guess()) {
-        <p>da stimmt etwas nicht ganz...</p>
-      }
     </div>
 
     <div id="buttons">
@@ -111,13 +114,13 @@
 
       <div class="help">
       @if (!done() && currentLocation().position && !busy()) {
-        <button matButton="elevated" (click)="thereYet()">Bin ich schon da?</button>
+        <button  class="wide" matButton="filled" color="red" (click)="thereYet()">Bin ich schon da?</button>
       }
       </div>
 
       <div class="help">
         @if(!currentLocation().id.includes('nohint')) {
-          <button matButton="elevated" (click)="moreHints()">
+          <button matButton="filled" (click)="moreHints()">
             @if (currentHintIndex() + 1 >= currentLocation().hints.length) {
               Lösung
             } @else {
@@ -126,7 +129,7 @@
           </button>
         }
         @if (!done()) {
-          <button matButton="elevated" (click)="skip()">{{ skipText()[skipped()] }}</button>
+          <button matButton="filled" (click)="skip()">{{ skipText()[skipped()] }}</button>
         }
       </div>
 

@@ -1,7 +1,6 @@
 
 @use '@angular/material' as mat;
 
-
 $gold-palette: (
   0: #000000,
   10: #2b1f00,
@@ -120,10 +119,17 @@ $theme: mat.define-theme(
 @include mat.core();
 
 :root {
-  @include mat.all-component-themes($theme);
+  @include mat.button-theme($theme);
+  @include mat.snack-bar-theme($theme)
 }
 
 
+:root {
+  @include mat.button-overrides((
+    filled-container-color: map-get(mat.$red-palette, 30),
+    filled-label-text-color: map-get($gold-palette, 60)
+  ));
+}
 
 body {
 
