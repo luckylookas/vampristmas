@@ -675,7 +675,7 @@ export const locations: Location[] = [
       '',
       'Mitten in der Bibliothek sitzt er am frühen Abend, als es wie jedes Jahr an seiner Tür klingelt.',
       '',
-      'Wie jedes Jahr steht auf seiner Fussmatte ein Geschenkkorb mit zwei Karten. '
+      'Wie jedes Jahr steht auf seiner Fussmatte ein Geschenkkorb mit zwei Karten.',
       '',
       'Wie jedes Jahr, keine Namen.',
       '',
