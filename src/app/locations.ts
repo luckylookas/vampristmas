@@ -668,18 +668,23 @@ export const locations: Location[] = [
       'Sie haben es sich jetzt verdient sich hin zu setzen, etwas warmes zu essen und zu trinken, und ihr ewiges Leben zu geniessen.',
       'Ohne Dämonen. Ohne Aufträge. Ohne Anschläge und Entführungen.',
       '',
-      '',
       'Ich bin sicher Dr. Jeremiah Böhriung hat seine Forschung erfolgreich abgeschlossen.',
       'Vermutlich hat er sogar endlich eine Professur ergattern können.',
       'In der ganzen Vampirgesellschafft ist er angesehen als erfolgreicher Wissenschaftler und einer der wenigen, der halbwegs vernünftig mit Malkavianern umzugehen weiss.',
       'In seiner neuen Wohnung nahe der Universität hat er eine Bibliothek voller Manuskripte der Trimere aus aller Welt, die bei ihm studieren wollten.',
       '',
       'Mitten in der Bibliothek sitzt er am frühen Abend, als es wie jedes Jahr an seiner Tür klingelt.',
-      'Wie jedes Jahr steht auf seiner Fussmatte ein Geschenkkorb mit zwei Karten. ' +
+      '',
+      'Wie jedes Jahr steht auf seiner Fussmatte ein Geschenkkorb mit zwei Karten. '
+      '',
       'Wie jedes Jahr, keine Namen.',
-      'Wie jedes Jahr, sieht Jeremiah Augenwinkel die zwei Männer die versuchen ihn unauffällig aus der Dunkelheit am Ende des Ganges zu beobachten.',
+      '',
+      'Wie jedes Jahr, sieht Jeremiah im Augenwinkel die zwei Männer die versuchen ihn unauffällig aus der Dunkelheit am Ende des Ganges zu beobachten.',
+      '',
       'Wie jedes Jahr, tut er so als würde er sie nicht sehen.',
+      '',
       'Wie jedes Jahr, muss er schmunzeln, wenn kurz dannach Mr. O und Mr. K anrufen und sich beschwören wie enttäuscht sie von ihm sind.',
+      '',
       'Wie jedes Jahr, steht auf den Karten nur `Ich bin stolz auf dich`.',
     ]
   },
@@ -726,7 +731,11 @@ export const locations: Location[] = [
       '',
       'Jedes Jahr, wenn sich der Tag jährt an dem Luis Nephrandi`s Magie zum Opfer fiehl, herrscht Frieden.',
       'Und alle Vampire sehen zum Himmel und erinnern sich beim Anblick eines neuen Sterns am Himmel an Luis Cruz.',
-      'Und was auch immer in Elenas Kopf verloren geht, nichteinmal sie wird Luis vergessen können.'
+      '',
+      'Und was auch immer in Elenas Kopf verloren geht.',
+      'Wohin auch immer sie sich verläuft.',
+      '',
+      'Nichteinmal sie wird Luis vergessen können.'
     ]
   },
 ]
