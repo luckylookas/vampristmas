@@ -398,7 +398,7 @@ export const locations: Location[] = [
       'HAHAHAHAHA',
       'Er hat euch nichteinmal eine Aufgabe gestellt. Das ist eigentlich geschummelt...',
       'Warum solltet ihr dann nicht schummeln?',
-      'Ueberspringt diesen Unsinn einfach.'
+      'überspringt diesen Unsinn einfach.'
     ],
     name: 'Paul.',
     id: 'asdfbn9pt7345nvp79w4bn0gn78werv',
@@ -508,11 +508,13 @@ export const locations: Location[] = [
       'Diesmal bekomme ich sie bestimmt.',
       'Wenn die wüssten!',
       '',
-      'Wenn die wüssten wie gern ich sie hab.',
-      'Aber so ist nunmal das Leben als Erzfeind.',
-      'Wenn ich versuchen muss die zu fangen und zu schickanieren, damit ich Zeit mit ihnen verbringen kann, dann werde ich das eben tun!',
+      'Wenn die wüssten wie gern ich sie eigentlich hab.',
+      'Hätten sie mir mal frohe Weihnachten gewünscht, dann hätte das alle nicht passieren müssen.',
+      'Jedem wird frohe Weihnachten gewünscht, nur mir nicht!',
+      'Und so muss ich sie, wie alle schlimmen Kinder, eben immer wieder bestrafen, bis sie er lernen!',
       '',
-      'Dabei wollte ich doch immer nur, dass mir jemand einfach sagt "ich hab dich lieb".',
+      'Es ist ein hartes Leben, aber es ist nuneinmal meins.',
+      '',
       'So, jetzt muss ich aber weiter - ich muss noch ein paar Leute engagieren, die den bieden sinnlose Aufträge erteilen die zu nichts führen.',
     ]
   },
@@ -576,7 +578,7 @@ export const locations: Location[] = [
       'Nur wenn ihr mein Tagebuch gelesen hättet, hättet ihr eine Chance!'
     ],
     id: '123o4m346m34ntmdd23snfsdv',
-    solution: 'ich hab dich lieb',
+    solution: 'frohe weihnachten',
     paragraphs: [
       'Nur ich sollte entkommen können!',
       '',
@@ -589,7 +591,7 @@ export const locations: Location[] = [
       'Offenbar habe ich ihre Fähigkeiten unterschätzt!',
       'Ihre Fähigkeiten sich selbst zu Demütigen! HAHA!',
       '',
-      'Am Ende bin ich ihnen immernoch in allen Belangen überlegen und es gibt nichts, dass Sie sagen oder tun könnten um mich zu bezwingen!'
+      'Am Ende bin ich Ihnen immernoch in allen Belangen überlegen und es gibt nichts, dass Sie sagen oder tun könnten um mich zu bezwingen!'
     ]
   },
   {
@@ -597,14 +599,14 @@ export const locations: Location[] = [
     next: [
       {
         player: 'any',
-        nextId: 'schluss',
+        nextId: '1hu23oih12fnnsdasdifnsss34un',
       }
     ],
     hints: [
     ],
     id: '1hu23oih12fnnsdasdifn34un',
     skipText: [
-      'ja!'
+      '...'
     ],
     paragraphs: [
       'Was?',
@@ -619,27 +621,120 @@ export const locations: Location[] = [
     ]
   },
   {
+    name: '...',
+    next: [
+      {
+        player: 'elena',
+        nextId: 'schluss_elena',
+      },
+      {
+        player: 'jeremiah',
+        nextId: 'schluss_jeremiah',
+      }
+    ],
+    hints: [
+    ],
+    id: '1hu23oih12fnnsdasdifnsss34un',
+    skipText: [
+      'ja!'
+    ],
+    paragraphs: [
+      '...',
+      'Ein gerade zu lächerlicher Versuch von mir zu tun als wäre ich nicht gerührt!',
+      '',
+      'Endlich habt ihr mich befreit von dieser Last. Diesem Zwang!',
+      'Ich muss garkeine komplizierten Fallen stellen, damit wir gemeinsam etwas unternehmen können!',
+      '',
+      'Es macht aber schon Spass irgendwie.',
+      'Also wenn ihr möchtet können wir das gern trotzdem weiter so machen...',
+    ]
+  },
+  {
     name: 'The End',
     next: [
     ],
     hints: [
       'Das wars.'
     ],
-    id: 'schluss',
+    id: 'schluss_jeremiah',
     paragraphs: [
       'Und so endet unsere Geschichte.',
       'Da wo alle guten Geschichten enden, an ihrem Ende.',
       '',
-      'Ich hoffe es hat alles funktioniert und ihr hattet Spass.',
-      'Ich hätte ja mitgespielt, aber das Spiel funktioniert für mich irgendwie nicht!',
+      'Wiedereinmal haben Jeremiah und Elena Weihnachten gerettet.',
+      'Weil, wie ihr euch bestimmt schon gedacht habt, bin ich weder Dagobert noch Paul.',
+      'Ich war die ganze Zeit der Weihnachtsmann.',
+      'Eines Dämon namens Nasenbär hatte mich unter seiner Kontrolle und so musste ich sein Spiel mitspielen.',
+      'Nur weil ihr klug genug wart, das zu erkennen und mich mit der magischen Formel zu befreien, kann ich noch rechtzeitig alle Kinder der Welt beschenken!',
       '',
-      'Je nach dem wann ihr spielt und wie ihr jetzt noch Zeit habt, könnt ihr euch ja melden, dann können wir noch wo Essen gehen oder so.',
-      'Ansonsten wuensch ich euch schöne Weihnachten und lass euch mal in Ruhe :).',
-      'Sagt auf jeden Fall bescheid, dass ihr fertig seid, damit ich das Spiel wieder löschen kann.'
+      'Der Siebenunzwanzigste schon??',
+      'Aber die Sonne geht immernoch auf. Irgendjemand muss zu Weihnachten meine Pflichten übernommen haben.',
+      'Aber das ist eine andere Geschichte.',
+      '',
+      'Jetzt verlassen wir Jeremiah und Elena.',
+      'Sie haben es sich jetzt verdient sich hin zu setzen, etwas warmes zu essen und zu trinken, und ihr ewiges Leben zu geniessen.',
+      'Ohne Dämonen. Ohne Aufträge. Ohne Anschläge und Entführungen.',
+      '',
+      '',
+      'Ich bin sicher Dr. Jeremiah Böhriung hat seine Forschung erfolgreich abgeschlossen.',
+      'Vermutlich ist er sogar Professor.',
+      'Mr. O und Mir. K schikanieren ihn immernoch, aber wenn niemand hinsieht treffen sich ihre und Jeremiahs Blicke und alle wissen: sie sind stolz auf ihn.',
+      'In der ganzen Vampirgesellschafft ist er angesehen als erfolgreicher Wissenschaftler und einer der wenigen, der halbwegs vernünftig mit Malkavianern umzugehen weiss.',
+      'In seiner neuen Wohnung nahe der Universität hat er eine Bibliothek voller Manuskripte der Trimere aus aller Welt, die bei ihm studieren wollten.',
+      '',
+      'Mitten in der Bibliothek sitzt er am frühen Morgen, nach einer erfolgreichen Nacht auf einem weichen Ohrensessel.',
+      'Zu leiser Musik aus einem Plattenspieler fällt sein Blick, über die Kante seines Buchs hinweg, auf einen alten, schiefen, billigen Schrank.',
+      '',
+      'Zufrieden lächelt er in dem Wissen, dass einige Schrauben darin fehlen.'
+    ]
+  },
+  {
+    name: 'The End',
+    next: [
+    ],
+    hints: [
+      'Das wars.'
+    ],
+    id: 'schluss_elena',
+    paragraphs: [
+      'Und so endet unsere Geschichte.',
+      'Da wo alle guten Geschichten enden, an ihrem Ende.',
+      '',
+      'Wiedereinmal haben Jeremiah und Elena Weihnachten gerettet.',
+      'Weil, wie ihr euch bestimmt schon gedacht habt, bin ich weder Dagobert noch Paul.',
+      'Ich war die ganze Zeit der Weihnachtsmann.',
+      'Eines Dämon namens Nasenbär hatte mich unter seiner Kontrolle und so musste ich sein Spiel mitspielen.',
+      'Nur weil ihr klug genug wart, das zu erkennen und mich mit der magischen Formel zu befreien, kann ich noch rechtzeitig alle Kinder der Welt beschenken!',
+      '',
+      'Der Siebenunzwanzigste schon??',
+      'Aber die Sonne geht immernoch auf. Irgendjemand muss zu Weihnachten meine Pflichten übernommen haben.',
+      'Aber das ist eine andere Geschichte.',
+      '',
+      'Jetzt verlassen wir Jeremiah und Elena.',
+      'Sie haben es sich jetzt verdient sich hin zu setzen, etwas warmes zu essen und zu trinken, und ihr ewiges Leben zu geniessen.',
+      'Ohne Dämonen. Ohne Aufträge. Ohne Anschläge und Entführungen.',
+      '',
+      '',
+      'Ich bin sicher Elena Cruz hat einen Weg gefunden mit dem Tod ihres Bruders umzugehen.',
+      'Zurückgeholt hat sie ihn warscheinlich nicht. Seine Zeit hier war vorbei.',
+      'Nachdem Elena Dr. Walter Bishop über Luis gestohlenes Geld mit diversen ungeklärten, mysteriösen Mordfällen und Terrorakten in Verbindung bringen konnte, verlor sich jede Spur von ihm.',
+      'Luis hatte Bishop als den wahnsinnigen Magier Nephrandi entlarvt der Vampire und Menschen gleichermassen quälte und versuchte beide Welten im Chaos untergehen zu lassen.',
+      'Die Camarilla, die Giovanni, sogar der Sabbat litten unter Nephrandis Einfluss.',
+      'Luis versuchte ihn im Alleingang zu stoppen.',
+      'Elena hat er nie etwas erzählt um sie vor der gefährlichen Welt zu beschützen in die er sich begeben hatte.',
+      '',
+      'Der Anschlag auf die Trimere in Amerika wurde ebenfalls Bishop`s alias Nephrandi`s Einfluss zugeschrieben.',
+      'Die Menschen Amerikas und Mexikos feierten Luis mutiges Opfer. Mit seinem Geld konnte er einem Massenmoörder die Mittel nehmen weiterzumachen.',
+      'Aber auch die Vampirgesellschafft war ungewohnt geeint im Andenken an Luis Cruz - den Sterblichen die sie alle gerettet hatte.',
+      '',
+      'In einem nie dagewesenen Akt der Einigkeit, vollführten alle grossen Clans ein Ritual um einen historischen Pakt zu schliessen.',
+      '',
+      'Jedes Jahr, wenn sich der Tag jährt an dem Luis Nephrandi`s Magie zum Opfer fiehl, herrscht Frieden.',
+      'Und alle Vampire sehen zum Himmel und erinnern sich beim Anblick eines neuen Sterns am Himmel an Luis Cruz.',
+      'Und was auch immer in Elenas Kopf verloren geht, nichteinmal sie wird Luis vergessen können.'
     ]
   },
 ]
-
 
 export function metersAway(position: Position, target: Position): number {
   const R = 6371; // Earth radius in km
