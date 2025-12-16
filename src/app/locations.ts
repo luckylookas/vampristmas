@@ -677,15 +677,19 @@ export const locations: Location[] = [
       '',
       '',
       'Ich bin sicher Dr. Jeremiah Böhriung hat seine Forschung erfolgreich abgeschlossen.',
-      'Vermutlich ist er sogar Professor.',
-      'Mr. O und Mir. K schikanieren ihn immernoch, aber wenn niemand hinsieht treffen sich ihre und Jeremiahs Blicke und alle wissen: sie sind stolz auf ihn.',
+      'Vermutlich hat er sogar endlich eine Professur ergattern können.',
       'In der ganzen Vampirgesellschafft ist er angesehen als erfolgreicher Wissenschaftler und einer der wenigen, der halbwegs vernünftig mit Malkavianern umzugehen weiss.',
       'In seiner neuen Wohnung nahe der Universität hat er eine Bibliothek voller Manuskripte der Trimere aus aller Welt, die bei ihm studieren wollten.',
       '',
-      'Mitten in der Bibliothek sitzt er am frühen Morgen, nach einer erfolgreichen Nacht auf einem weichen Ohrensessel.',
-      'Zu leiser Musik aus einem Plattenspieler fällt sein Blick, über die Kante seines Buchs hinweg, auf einen alten, schiefen, billigen Schrank.',
-      '',
-      'Zufrieden lächelt er in dem Wissen, dass einige Schrauben darin fehlen.'
+      'Mitten in der Bibliothek sitzt er am frühen Abend, als es wie jedes Jahr an seiner Tür klingelt.',
+      'Wie jedes Jahr wartet er kurz, bevor er die Tür öffnet.',
+      'Wie jedes Jahr steht auf seiner Fussmatte ein Geschenkkorb mit zwei Karten. ' +
+      'Wie jedes Jahr, steht auf den Karten nur `Ich bin stolz auf dich`.',
+      'Wie jedes Jahr, keine Namen.',
+      'Wie jedes Jahr, sieht Jeremiah Augenwinkel die zwei Männer die versuchen ihn unauffällig aus der Dunkelheit am Ende des Ganges zu beobachten.',
+      'Wie jedes Jahr, tut er so als würde er sie nicht sehen.',
+      'Er zieht eine Schublade aus einer alten Komode in der eingie Schrauben fehlen und legt die Karte zu den anderen.',
+      'Wie jedes Jahr, muss er schmunzeln, wenn kurz dannach Mr. O und Mr. K anrufen und sich beschwören wie enttäuscht sie von ihm sind.'
     ]
   },
   {
