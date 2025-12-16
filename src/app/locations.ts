@@ -683,7 +683,7 @@ export const locations: Location[] = [
       '',
       'Wie jedes Jahr, tut er so als würde er sie nicht sehen.',
       '',
-      'Wie jedes Jahr, muss er schmunzeln, wenn kurz dannach Mr. O und Mr. K anrufen und sich beschwören wie enttäuscht sie von ihm sind.',
+      'Wie jedes Jahr, muss er schmunzeln, wenn kurz dannach Mr. O und Mr. K anrufen und beschwören wie enttäuscht sie von ihm sind.',
       '',
       'Wie jedes Jahr, steht auf den Karten nur `Ich bin stolz auf dich`.',
     ]
